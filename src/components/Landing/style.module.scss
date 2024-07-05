@@ -1,13 +1,53 @@
 .landing{
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 120vh;
     overflow: hidden;
+    padding:0 6vw ;
 
-    img{
+    img {
       object-fit: cover;
+      object-position: top center; /* Adjust position: center center, top right, bottom left, etc. */
+      mix-blend-mode: screen;
     }
-    
+    .mainContainer{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      direction: rtl;
+      gap:0;
+      align-items: flex-start;
+      z-index: 10;
+    }
+    .buttonContainer{
+      display: flex;
+      gap: 20px;
+      flex-direction: row;
+      }
+    .moreButton{
+      z-index: 10;
+      top: 70%;
+      // left: calc(100% - 200px); 
+      background-color: #00C2FF;
+      width: 180px;
+      height: 70px;
+      color: white;
+      border-radius: 50px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      p{
+        margin: 0px;
+        font-size: 16px;
+        font-weight: 300;
+        position: relative;
+        z-index: 1;
+    }
+    }
+
     .sliderContainer{
       position: absolute;
       top: calc(100vh - 350px);
@@ -32,11 +72,18 @@
       left: 100%;
       top: 0;
     }
-  
+    .mainTitle {
+      // position: absolute;
+      // top: 35%;
+      // left: 65%;
+      color: white;
+      font-size: 5vw;
+      font-weight: 300;
+    }
     .description{
-      position: absolute;
-      top: 35%;
-      left: 65%;
+      // position: absolute;
+      // top: 35%;
+      // left: 65%;
       color: white;
       font-size: 24px;
       font-weight: 300;
@@ -44,10 +91,7 @@
         margin: 0px;
         margin-bottom: 10px;
       }
-      svg{
-        transform: scale(2);
-        margin-bottom: 100px;
-      }
+
     }
   }
   

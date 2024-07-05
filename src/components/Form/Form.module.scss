@@ -1,0 +1,54 @@
+// styles/Form.module.scss
+$form-border-radius: 50px;
+$form-color: #ffffff;
+$form-border-color: #ffffff;
+$form-background-opacity: 0.7;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+  padding: 20px;
+  color: $form-color;
+  
+  @media(min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.input {
+  background: rgba(255, 255, 255, $form-background-opacity);
+  border: none;
+  border-radius: $form-border-radius;
+  padding: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+  
+  @media(min-width: 768px) {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.button {
+  background: $form-color;
+  border: none;
+  border-radius: $form-border-radius;
+  padding: 10px 20px;
+  color: #000;
+  cursor: pointer;
+  flex: 1;
+  
+  @media(min-width: 768px) {
+    flex: none;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
