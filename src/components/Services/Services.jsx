@@ -31,7 +31,7 @@ const Services = () => {
       <h2 className={styles.title}>איך אנחנו יכולים לעזור לכם?</h2>
       <div className={styles.cards}>
         {servicesData.map((service, index) => (
-          <div className={styles.card} key={index}>
+          <div data-scroll data-scroll-speed={0.01*(index+1)} className={styles.card} key={index}>
             <div className={styles.icon}>
               <Image
                 src={service.icon}

@@ -10,6 +10,10 @@ import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import Services from '../components/Services/Services';
 import WorkFlow from '../components/WorkFlow/WorkFlow';
+import MainProjects from '../components/MainProjects/MainProjects';
+
+
+
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -39,6 +43,7 @@ export default function Home() {
       {/* <Projects /> */}
       <Services />
       <WorkFlow />
+      <MainProjects />
       <SlidingImages />
       <Contact />
     </main>
