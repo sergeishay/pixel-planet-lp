@@ -50,12 +50,21 @@ export default function Home() {
       animate="enter"
       className={styles.landing}
     >
-      <Image
-        className={styles.panda}
-        src="/images/panda.webp"
-        fill={true}
-        alt="background"
-      />
+      <div className={styles.desktopImage}>
+        <Image
+          className={styles.panda}
+          src="/images/panda.webp"
+          fill={true}
+          alt="background"
+        />
+      </div>
+      <div className={styles.mobileImage}>
+        <Image
+          src="/images/mobile-hero-bg.webp"
+          fill={true}
+          alt="background for mobile"
+        />
+      </div>
       {/* <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>Freelance Developer -</p>
@@ -100,7 +109,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <StarsCanvas />
     </motion.main>
   );

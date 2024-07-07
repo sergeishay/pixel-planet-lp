@@ -5,13 +5,38 @@
   overflow: hidden;
   padding: 0 6vw;
   @media (max-width: 768px) {
-    overflow: auto;
+    overflow-y: visible;
   }
-  img {
-    object-fit: cover;
-    object-position: top center; /* Adjust position: center center, top right, bottom left, etc. */
-    mix-blend-mode: screen;
+  .desktopImage {
+    display: none;
   }
+
+  .mobileImage {
+    display: block;
+    img {
+      object-fit: cover;
+      object-position: top center;
+      mix-blend-mode: screen;
+  
+    }
+  }
+
+  @media (min-width: 768px) {
+    .desktopImage {
+      display: block;
+      img {
+        object-fit: cover;
+        object-position: top center;
+        mix-blend-mode: screen;
+    
+      }
+    }
+
+    .mobileImage {
+      display: none;
+    }
+  }
+
   .mainContainer {
     width: 100%;
     display: flex;
