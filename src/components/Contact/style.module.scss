@@ -78,6 +78,11 @@
             margin-left: 200px;
             margin-right: 200px;
         }
+        @media screen and (max-width: 768px) {
+            .nav{
+                display: none;
+            }
+        }
         .info{
             display: flex;
             justify-content: space-between;

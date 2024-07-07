@@ -5,10 +5,13 @@
     position: relative;
     margin-top: 200px;
     background-color: white;
+    overflow:hidden;
+
     z-index: 1;
     .slider{
         display: flex;
         position: relative;
+        overflow:hidden;
         gap: 3vw;
         width: 120vw;
         left: -10vw;

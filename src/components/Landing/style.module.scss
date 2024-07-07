@@ -73,6 +73,9 @@
       position: relative;
       z-index: 1;
     }
+    @media (max-width: 768px){
+      top:50%;
+    }
   }
 
   .sliderContainer {
@@ -152,5 +155,13 @@
       justify-content: center;
       align-items: center;
     }
+  }
+}
+
+
+@media screen and (max-width:450px){
+  .landing{
+    height: 100vh;
+    padding: 0 3vw;
   }
 }
