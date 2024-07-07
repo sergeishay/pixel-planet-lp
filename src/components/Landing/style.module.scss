@@ -5,7 +5,7 @@
   overflow: hidden;
   padding: 0 6vw;
   @media (max-width: 768px) {
-    overflow-y: visible;
+    overflow: visible;
   }
   .desktopImage {
     display: none;
