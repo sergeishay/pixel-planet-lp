@@ -1,97 +1,131 @@
-.landing{
-    position: relative;
+.landing {
+  position: relative;
+  display: flex;
+  height: 120vh;
+  overflow: hidden;
+  padding: 0 6vw;
+  @media (max-width: 768px) {
+    overflow: auto;
+  }
+  img {
+    object-fit: cover;
+    object-position: top center; /* Adjust position: center center, top right, bottom left, etc. */
+    mix-blend-mode: screen;
+  }
+  .mainContainer {
+    width: 100%;
     display: flex;
-    height: 120vh;
-    overflow: hidden;
-    padding:0 6vw ;
-
-    img {
-      object-fit: cover;
-      object-position: top center; /* Adjust position: center center, top right, bottom left, etc. */
-      mix-blend-mode: screen;
+    flex-direction: column;
+    justify-content: center;
+    direction: rtl;
+    gap: 0;
+    align-items: flex-start;
+    z-index: 10;
+  }
+  .buttonContainer {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .moreButton {
+    z-index: 10;
+    top: 67%;
+    // left: calc(100% - 200px);
+    background-color: #00c2ff;
+    width: 180px;
+    height: 70px;
+    color: white;
+    border-radius: 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    p {
+      margin: 0px;
+      font-size: 16px;
+      font-weight: 300;
+      position: relative;
+      z-index: 1;
     }
-    .mainContainer{
-      width: 100%;
+  }
+
+  .sliderContainer {
+    position: absolute;
+    top: calc(100vh - 350px);
+  }
+
+  .slider {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .slider p {
+    position: relative;
+    margin: 0px;
+    color: white;
+    font-size: 230px;
+    font-weight: 500;
+    padding-right: 50px;
+  }
+
+  .slider p:nth-of-type(2) {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+  .mainTitle {
+    color: white;
+    font-size: 5vw;
+    font-weight: 300;
+  }
+  .description {
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    p {
+      margin: 0px;
+      margin-bottom: 10px;
+    }
+  }
+  .bottomForm {
+    background: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom:20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .rightDiv{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      direction: rtl;
-      gap:0;
-      align-items: flex-start;
-      z-index: 10;
-    }
-    .buttonContainer{
-      display: flex;
-      gap: 20px;
-      flex-direction: row;
-      }
-    .moreButton{
-      z-index: 10;
-      top: 70%;
-      // left: calc(100% - 200px); 
-      background-color: #00C2FF;
-      width: 180px;
-      height: 70px;
-      color: white;
-      border-radius: 50px;
-      position: absolute;
-      display: flex;
       align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      p{
-        margin: 0px;
-        font-size: 16px;
+      gap: 0;
+      .smallTitlte{
+        font-size:21px;
         font-weight: 300;
-        position: relative;
-        z-index: 1;
-    }
-    }
-
-    .sliderContainer{
-      position: absolute;
-      top: calc(100vh - 350px);
-    }
-    
-    .slider{
-      position: relative;
-      white-space: nowrap;
-    }
-    
-    .slider p{
-      position: relative;
-      margin: 0px;
-      color: white;
-      font-size: 230px;
-      font-weight: 500;
-      padding-right: 50px;
-    }
-    
-    .slider p:nth-of-type(2){
-      position: absolute;
-      left: 100%;
-      top: 0;
-    }
-    .mainTitle {
-      // position: absolute;
-      // top: 35%;
-      // left: 65%;
-      color: white;
-      font-size: 5vw;
-      font-weight: 300;
-    }
-    .description{
-      // position: absolute;
-      // top: 35%;
-      // left: 65%;
-      color: white;
-      font-size: 24px;
-      font-weight: 300;
-      p{
-        margin: 0px;
-        margin-bottom: 10px;
+        margin: 0;
+        color:white;
       }
-
+      .bigTitle{
+        font-size: 48px;
+        margin:0;
+        color:white;
+        font-weight: bold;
+        line-height:36px;
+      }
+    }
+    .leftDiv{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
-  
+}

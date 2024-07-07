@@ -2,46 +2,64 @@
 $form-border-radius: 50px;
 $form-color: #ffffff;
 $form-border-color: #ffffff;
-$form-background-opacity: 0.7;
+$form-background-opacity: 0.2;
 
 .form {
   display: flex;
   flex-direction: column;
-  border: 1px solid $form-border-color;
-  border-radius: $form-border-radius;
+  flex-wrap: wrap;
   padding: 20px;
+  gap: 10px;
   color: $form-color;
-  
-  @media(min-width: 768px) {
+  width: 70%;
+  max-width: 810px;
+  @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
 .input {
-  background: rgba(255, 255, 255, $form-background-opacity);
-  border: none;
-  border-radius: $form-border-radius;
-  padding: 10px;
-  margin-bottom: 10px;
-  flex: 1;
+    background: rgba(18, 13, 82, $form-background-opacity);
+    border: 1px solid white;
+    color: white;
+    width: 200px;
+    border-radius: $form-border-radius;
+    padding: 10px;
+    margin-bottom: 10px;
+    flex: 1 1 0;
   
-  @media(min-width: 768px) {
-    margin-right: 10px;
-    margin-bottom: 0;
+    @media (min-width: 768px) {
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  
+    &::placeholder {
+      color: white;
+    }
+  
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
   }
-}
+  
 
 .button {
-  background: $form-color;
+  background: #00C2FF;
   border: none;
   border-radius: $form-border-radius;
   padding: 10px 20px;
-  color: #000;
+  color: white;
   cursor: pointer;
   flex: 1;
-  
-  @media(min-width: 768px) {
+  transition: all 0.5s;
+  &:hover {
+    background: #9945FF;
+  }
+
+  @media (min-width: 768px) {
     flex: none;
   }
 }
