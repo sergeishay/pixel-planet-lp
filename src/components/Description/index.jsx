@@ -7,12 +7,14 @@ import Rounded from '../../common/RoundedButton';
 
 export default function Description() {
 
-    const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
+    const phrase = "ברוכים הבאים ל-Planet Pixel - המקום בו חלומות הופכים לתוצרים דיגיטליים. אנחנו צוות של אסטרונאוטים דיגיטליים, מעצבים ומפתחים ואנחנו מאמינים בלהפוך עסקים למותגים ביום יום אנו לובשים את חליפת החלל שלנו וטסים לגלקסיה בין כל הכוכבים על מנת...... אנחנו מזמינים אתכם להצטרף למסע משותף של צמיחה דיגיטלית.";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
         <div ref={description} className={styles.description}>
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>אז מי אנחנו?</motion.p>
             <div className={styles.body}>
+
                 <p>
                 {
                     phrase.split(" ").map( (word, index) => {
@@ -20,7 +22,6 @@ export default function Description() {
                     })
                 }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
                         <p>About me</p>

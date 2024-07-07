@@ -8,7 +8,8 @@ import Projects from '../components/Projects';
 import Description from '../components/Description';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
-
+import Services from '../components/Services/Services';
+import WorkFlow from '../components/WorkFlow/WorkFlow';
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -36,6 +37,8 @@ export default function Home() {
       <Landing />
       <Description />
       {/* <Projects /> */}
+      <Services />
+      <WorkFlow />
       <SlidingImages />
       <Contact />
     </main>

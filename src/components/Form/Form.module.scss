@@ -27,11 +27,11 @@ $form-background-opacity: 0.2;
   width: 200px;
   border-radius: $form-border-radius;
   padding: 10px;
-  margin-bottom: 10px;
+//   margin-bottom: 10px;
   flex: 1 1 0;
 
   @media (max-width: 768px) {
-    margin-right: 10px;
+    margin-right:0px;
     margin-bottom: 0;
     width: 100%;
   }

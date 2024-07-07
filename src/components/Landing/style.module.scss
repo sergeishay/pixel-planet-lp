@@ -4,9 +4,7 @@
   height: 120vh;
   overflow: hidden;
   padding: 0 6vw;
-  @media (max-width: 768px) {
-    overflow: visible;
-  }
+
   .desktopImage {
     display: none;
   }
@@ -46,6 +44,11 @@
     gap: 0;
     align-items: flex-start;
     z-index: 10;
+    @media screen and (max-width: 768px) {
+      justify-content: flex-start;
+      padding: 3vw;
+      
+    }
   }
   .buttonContainer {
     display: flex;
@@ -106,6 +109,10 @@
     color: white;
     font-size: 5vw;
     font-weight: 300;
+    @media screen and (max-width: 768px) {
+      font-size: 45px;
+      margin-top:20vh;
+    }
   }
   .description {
     color: white;
@@ -154,6 +161,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        
+      }
     }
   }
 }
@@ -161,7 +172,7 @@
 
 @media screen and (max-width:450px){
   .landing{
-    height: 100vh;
+    height: 1000PX;
     padding: 0 3vw;
   }
 }
