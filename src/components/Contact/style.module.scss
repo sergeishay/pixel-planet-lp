@@ -82,6 +82,7 @@
             .nav{
                 display: none;
             }
+
         }
         .info{
             display: flex;
@@ -128,7 +129,13 @@
                     font-size: 1em;
                 }
             }
-            
+  
+        }
+        @media screen and (max-width: 768px) {
+            .info{
+                display: none;
+            }
+
         }
     }
     
