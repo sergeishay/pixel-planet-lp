@@ -40,7 +40,6 @@ export default function Home() {
       </AnimatePresence>
       <Landing />
       <Description />
-      {/* <Projects /> */}
       <Services />
       <WorkFlow />
       <MainProjects />

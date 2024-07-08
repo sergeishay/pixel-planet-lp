@@ -60,17 +60,11 @@ export default function Home() {
       </div>
       <div className={styles.mobileImage}>
         <Image
-          src="/images/mobile-hero-bg.webp"
+          src="/images/mobile-hero.jpg"
           fill={true}
           alt="background for mobile"
         />
       </div>
-      {/* <div className={styles.sliderContainer}>
-        <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>Freelance Developer -</p>
-          <p ref={secondText}>Freelance Developer -</p>
-        </div>
-      </div> */}
       <div className={styles.mainContainer}>
         <div data-scroll data-scroll-speed={0.1} className={styles.mainTitle}>
           <p>
@@ -78,10 +72,11 @@ export default function Home() {
             <br />
             את העסק שלך לחלל
           </p>
+        <div data-scroll data-scroll-speed={0.04} className={styles.description}>
+          <p>פיתוח ועיצוב אתרים שגורמים לפנדות לטוס לחלל</p>
         </div>
-        {/* <div data-scroll data-scroll-speed={0.1} className={styles.description}>
-          <p>Designer & Developer</p>
-        </div> */}
+        </div>
+
         <div className={styles.buttonContainer}>
           <Rounded className={styles.moreButton}>
             <p>דברו איתנו</p>
@@ -95,8 +90,8 @@ export default function Home() {
           <Form />
           <div className={styles.leftDiv}>
             <svg
-              width="33"
-              height="33"
+              width="25"
+              height="25"
               viewBox="0 0 33 33"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +101,8 @@ export default function Home() {
                 fill="white"
               />
             </svg>
+            <p className={styles.smallTitlte}>גם ב-whatsapp</p>
+
           </div>
         </div>
       </div>

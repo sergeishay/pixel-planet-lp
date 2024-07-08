@@ -12,11 +12,11 @@ $form-background-opacity: 0.2;
   gap: 10px;
   color: $form-color;
   width: 70%;
-  max-width: 810px;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    max-width: 810px;
   }
 }
 
@@ -27,13 +27,13 @@ $form-background-opacity: 0.2;
   width: 200px;
   border-radius: $form-border-radius;
   padding: 10px;
-//   margin-bottom: 10px;
+  //   margin-bottom: 10px;
   flex: 1 1 0;
 
   @media (max-width: 768px) {
-    margin-right:0px;
+    margin-right: 0px;
     margin-bottom: 0;
-    width: 100%;
+    width: 92%;
   }
 
   &::placeholder {
@@ -65,9 +65,21 @@ $form-background-opacity: 0.2;
   }
 }
 
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .error {
-  color: red;
-  font-size: 12px;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  background-color: red;
+  position: absolute;
+  padding: 2px 5px;
+  border-radius: 50px;
+  color: white;
+  font-size: 13px;
+  left: 0;
+  top: -5px;
 }
