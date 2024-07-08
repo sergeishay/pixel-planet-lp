@@ -4,12 +4,10 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
-import Projects from '../components/Projects';
 import Description from '../components/Description';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import Services from '../components/Services/Services';
-import WorkFlow from '../components/WorkFlow/WorkFlow';
 import MainProjects from '../components/MainProjects/MainProjects';
 
 
@@ -41,7 +39,6 @@ export default function Home() {
       <Landing />
       <Description />
       <Services />
-      <WorkFlow />
       <MainProjects />
       <SlidingImages />
       <Contact />

@@ -12,6 +12,10 @@
     color: white;
     gap: 00px;
     font-size: 36px;
+    @media screen and (max-width:450px) {
+        padding:50px 20px 80px 20px;
+
+    }
     .body{
         max-width: 1400px;
         display: flex;
@@ -57,6 +61,11 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            @media screen and (max-width:450px) {
+                width:100px;
+                height:100px;
+                left: calc(100% - 150px); 
+            }
             p{
                 margin: 0px;
                 font-size: 16px;

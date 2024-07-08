@@ -1,15 +1,15 @@
 // components/Form.js
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-
 import styles from "./Form.module.scss";
 import { validateForm } from "../../helpers/formValidation";
 
-const Form = () => {
+const Form = ({ isFooter }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
+    service: isFooter ? "web development" : "", // Default value for the select field
   });
 
   const [errors, setErrors] = useState({});
@@ -70,7 +70,6 @@ const Form = () => {
         />
         {errors.phone && <span className={styles.error}>{errors.phone}</span>}
       </div>
-
       <div className={styles.inputDiv}>
         <input
           type="email"
@@ -82,6 +81,22 @@ const Form = () => {
         />
         {errors.email && <span className={styles.error}>{errors.email}</span>}
       </div>
+
+      {isFooter && (
+        <div className={styles.inputDiv}>
+          <select
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            className={styles.select}
+          >
+            <option value="web development">Web Development</option>
+            <option value="design">Design</option>
+            <option value="marketing">Marketing</option>
+          </select>
+          {errors.service && <span className={styles.error}>{errors.service}</span>}
+        </div>
+      )}
 
       <button type="submit" className={styles.button}>
         דברו איתי

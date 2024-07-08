@@ -24,7 +24,7 @@ export default function Description() {
                 </p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
-                        <p>About me</p>
+                        <p>אני רוצה פרטים</p>
                     </Rounded>
                 </div>
             </div>

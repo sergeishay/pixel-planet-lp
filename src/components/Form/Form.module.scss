@@ -1,4 +1,5 @@
 // styles/Form.module.scss
+
 $form-border-radius: 50px;
 $form-color: #ffffff;
 $form-border-color: #ffffff;
@@ -20,14 +21,14 @@ $form-background-opacity: 0.2;
   }
 }
 
-.input {
+.input,
+.select {
   background: rgba(18, 13, 82, $form-background-opacity);
   border: 1px solid white;
   color: white;
   width: 200px;
   border-radius: $form-border-radius;
   padding: 10px;
-  //   margin-bottom: 10px;
   flex: 1 1 0;
 
   @media (max-width: 768px) {
