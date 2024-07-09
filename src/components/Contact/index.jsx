@@ -1,9 +1,9 @@
 import styles from "./style.module.scss";
-import Image from "next/image";
 import Rounded from "../../common/RoundedButton";
 import { useRef } from "react";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 import Magnetic from "../../common/Magnetic";
+import Image from "next/image";
 import Link from "next/link";
 import Form from "../Form/Form";
 
@@ -17,7 +17,7 @@ export default function Contact() {
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
   return (
-    <motion.div style={{ y }} ref={container} className={styles.contact}>
+    <motion.div id="contact" style={{ y }} ref={container} className={styles.contact}>
       <div className={styles.body}>
         <div className={styles.topSection}>
           <div className={styles.rightSection}>

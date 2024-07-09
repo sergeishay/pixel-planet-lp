@@ -1,125 +1,120 @@
-.contact{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.contact {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #141516;
+  direction: rtl;
+  overflow: hidden;
+
+  position: relative;
+  .body {
+    padding-top: 200px;
+    width: 100%;
+    max-width: 878px;
     background-color: #141516;
-    direction: rtl;
-    overflow: hidden;
 
-    position: relative;
-    .body{
-        padding-top: 200px;
-        width: 100%;
-        max-width: 878px;
-        background-color: #141516;
-
-        .topSection{
-            border-bottom: 1px solid rgb(134, 134, 134);
-            padding-bottom: 100px;
-            position: relative;
-            display: flex;
-            gap:20px;
-            @media screen and (max-width: 768px) {
-                flex-direction: column;
-                align-items: center;
-                margin: 0;
-            }
-        }
-        .nav{
-            display: flex;
-            flex-direction: column;
-            gap: 0px;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-        .logoFooter{
-            margin-bottom: -20px;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
-        .rightSection{
-            gap: 2px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            // justify-content: center;
-            align-items: flex-start;
-            @media screen and (max-width: 768px) {
-                padding-right:100px;
-            }
-            a{
-                text-decoration: none;
-                color: white;
-            
-            }
-        }
-        .bigTitle{
-            font-size: 48px;
-            margin:0;
-            color:white;
-            font-weight: bold;
-            line-height:36px;
-            padding-bottom: 10px;
-          }
-          .smallTitlte{
-            font-size:18px;
-            font-weight: 300;
-            margin: 0;
-            color:white;
-            padding-bottom: 5px;
-
-          }
-          .leftSection{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            @media screen and (max-width: 768px) {
-              width: 100%;
-              flex-direction: row;
-              gap:5px;
-            }
-          }
-          .social{
-            display: flex;
-            align-items: center;
-    
-            .el{
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                z-index: 1;
-                padding: 15px;
-                cursor: pointer;
-                &:hover{
-                    .indicator{
-                        transform: scale(1);
-                    }
-                }
-                .indicator{
-                    position: absolute;
-                    width: 5px;
-                    height: 5px;
-                    top: 45px;
-                    left: 50%;
-                    background-color: white;
-                    border-radius: 50%;
-                    transform: scale(0) translateX(-50%);
-                    transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
-                }
-            }
-            a{
-                cursor: pointer;
-            }
-
-        } 
-
+    .topSection {
+      border-bottom: 1px solid rgb(134, 134, 134);
+      padding-bottom: 100px;
+      position: relative;
+      display: flex;
+      gap: 20px;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
     }
-    
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .logoFooter {
+      margin-bottom: -20px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .rightSection {
+      gap: 2px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: flex-start;
+      @media screen and (max-width: 768px) {
+        padding-right: 100px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .bigTitle {
+      font-size: 48px;
+      margin: 0;
+      color: white;
+      font-weight: bold;
+      line-height: 36px;
+      padding-bottom: 10px;
+    }
+    .smallTitlte {
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0;
+      color: white;
+      padding-bottom: 5px;
+    }
+    .leftSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        flex-direction: row;
+        gap: 5px;
+      }
+    }
+    .social {
+      display: flex;
+      align-items: center;
+
+      .el {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        padding: 15px;
+        cursor: pointer;
+        &:hover {
+          .indicator {
+            transform: scale(1);
+          }
+        }
+        .indicator {
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          top: 45px;
+          left: 50%;
+          background-color: white;
+          border-radius: 50%;
+          transform: scale(0) translateX(-50%);
+          transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+      }
+      a {
+        cursor: pointer;
+      }
+    }
+  }
 }

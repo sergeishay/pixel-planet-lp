@@ -27,11 +27,11 @@ const projects = [
 
 const MainProjects = () => {
   return (
-    <div className={styles.projects}>
+    <div id="projects" className={styles.projects}>
       <h2 className={styles.title}>פרויקטים נבחרים</h2>
       <div className={styles.cards}>
         {projects.map((project, index) => (
-          <Link href={project.link} key={index} passHref>
+          <Link href={project.link} target="_blank" key={index} passHref>
             <div className={styles.card} target="_blank" rel="noopener noreferrer">
               <div className={styles.imageWrapper}>
                 <Image 

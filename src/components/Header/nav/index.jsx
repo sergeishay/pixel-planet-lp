@@ -14,16 +14,16 @@ const navItems = [
     href: "/",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "מי אנחנו",
+    href: "/#about",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "פרויקטים",
+    href: "/#projects",
   },
   {
-    title: "Contact",
-    href: "/contact",
+    title: "צרו קשר",
+    href: "/#contact",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Nav({ isActive, setIsActive }) {
       <div className={styles.body}>
         <div onMouseLeave={() => { setSelectedIndicator(pathname) }} className={styles.nav}>
           <div className={styles.header}>
-            <p>Navigation</p>
+            <p>תפריט </p>
           </div>
           {navItems.map((data, index) => (
             <Link 

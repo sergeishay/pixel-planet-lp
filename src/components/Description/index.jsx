@@ -10,7 +10,7 @@ export default function Description() {
   const description = useRef(null);
   const isInView = useInView(description);
   return (
-    <div ref={description} className={styles.description}>
+    <div id="about" ref={description} className={styles.description}>
       <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
         אז מי אנחנו?
       </motion.p>
