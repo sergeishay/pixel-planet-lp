@@ -20,9 +20,26 @@ $form-background-opacity: 0.2;
     max-width: 810px;
   }
 }
+.form2{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: $form-color;
+  width: 100%;
+  margin:0 50px ;
 
-.input,
-.select {
+  @media (min-width: 768px) {
+  flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    // max-width: 810px;
+    margin: 0;
+  }
+
+}
+
+.input {
   background: rgba(18, 13, 82, $form-background-opacity);
   border: 1px solid white;
   color: white;
@@ -47,7 +64,37 @@ $form-background-opacity: 0.2;
     box-shadow: none;
   }
 }
+.input2,
+.select {
+  background: rgba(18, 13, 82, $form-background-opacity);
+  border: 1px solid white;
+  color: white;
+  width: 600px;
+  border-radius: $form-border-radius;
+  padding: 15px 0 15px 0;
+  flex: 1;
 
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  &::placeholder {
+    color: white;
+    padding-right:10px;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.select{
+  padding: 15px;
+}
 .button {
   background: #00c2ff;
   border: none;
@@ -65,6 +112,26 @@ $form-background-opacity: 0.2;
     flex: none;
   }
 }
+.button2{
+  background: #00c2ff;
+  border: none;
+  width:150px;
+  align-self: flex-end;
+  border-radius: $form-border-radius;
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+  flex: 1;
+  transition: all 0.5s;
+  &:hover {
+    background: #9945ff;
+  }
+
+  @media (max-width: 768px) {
+    flex: none;
+  }
+
+}
 
 .inputDiv {
   display: flex;
@@ -72,7 +139,9 @@ $form-background-opacity: 0.2;
   position: relative;
   justify-content: center;
   align-items: flex-start;
-}
+
+ }
+
 
 .error {
   background-color: red;

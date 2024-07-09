@@ -47,7 +47,10 @@ const Form = ({ isFooter }) => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form
+      className={isFooter ? styles.form2 : styles.form}
+      onSubmit={handleSubmit}
+    >
       <div className={styles.inputDiv}>
         <input
           type="text"
@@ -55,7 +58,7 @@ const Form = ({ isFooter }) => {
           placeholder="שם מלא"
           value={formData.name}
           onChange={handleChange}
-          className={styles.input}
+          className={isFooter ? styles.input2 : styles.input}
         />
         {errors.name && <span className={styles.error}>{errors.name}</span>}
       </div>
@@ -66,7 +69,7 @@ const Form = ({ isFooter }) => {
           placeholder="טלפון"
           value={formData.phone}
           onChange={handleChange}
-          className={styles.input}
+          className={isFooter ? styles.input2 : styles.input}
         />
         {errors.phone && <span className={styles.error}>{errors.phone}</span>}
       </div>
@@ -77,7 +80,7 @@ const Form = ({ isFooter }) => {
           placeholder="אימייל"
           value={formData.email}
           onChange={handleChange}
-          className={styles.input}
+          className={isFooter ? styles.input2 : styles.input}
         />
         {errors.email && <span className={styles.error}>{errors.email}</span>}
       </div>
@@ -94,11 +97,16 @@ const Form = ({ isFooter }) => {
             <option value="design">Design</option>
             <option value="marketing">Marketing</option>
           </select>
-          {errors.service && <span className={styles.error}>{errors.service}</span>}
+          {errors.service && (
+            <span className={styles.error}>{errors.service}</span>
+          )}
         </div>
       )}
 
-      <button type="submit" className={styles.button}>
+      <button
+        type="submit"
+        className={isFooter ? styles.button2 : styles.button}
+      >
         דברו איתי
       </button>
     </form>
