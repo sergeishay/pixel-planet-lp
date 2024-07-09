@@ -9,10 +9,10 @@
     color: white;
     z-index: 135;
     direction: rtl;
-    width: 400px; // Adjust width for desktop
+    width: 400px; 
   
     @media screen and (max-width: 768px) {
-      width: 100%; // Full width on mobile
+      width: 100%; 
     }
   
     .body {

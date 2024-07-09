@@ -1,18 +1,14 @@
-// components/Nav.js
 import React, { useState } from 'react';
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../animation';
-import Link from './Link';
+import Link from './Link'; // Ensure this is the correct import path
 import Curve from './Curve';
 import Footer from './Footer';
 import Image from 'next/image';
+
 const navItems = [
-  {
-    title: "Home",
-    href: "/",
-  },
   {
     title: "מי אנחנו",
     href: "/#about",
@@ -57,6 +53,7 @@ export default function Nav({ isActive, setIsActive }) {
               data={{ ...data, index }} 
               isActive={selectedIndicator === data.href} 
               setSelectedIndicator={setSelectedIndicator}
+              onClick={handleClose} // Pass the handleClose function to each Link
             />
           ))}
         </div>
