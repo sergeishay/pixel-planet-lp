@@ -15,7 +15,6 @@
       object-fit: cover;
       object-position: top center;
       mix-blend-mode: screen;
-  
     }
   }
 
@@ -26,7 +25,6 @@
         object-fit: cover;
         object-position: top center;
         mix-blend-mode: screen;
-    
       }
     }
 
@@ -44,21 +42,22 @@
     gap: 0;
     align-items: flex-start;
     z-index: 10;
+
     @media screen and (max-width: 768px) {
       justify-content: flex-start;
       padding: 3vw;
-      
     }
   }
+
   .buttonContainer {
     display: flex;
     gap: 20px;
     flex-direction: row;
   }
+
   .moreButton {
     z-index: 10;
     top: 67%;
-    // left: calc(100% - 200px);
     background-color: #00c2ff;
     width: 180px;
     height: 70px;
@@ -69,6 +68,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
     p {
       margin: 0px;
       font-size: 16px;
@@ -76,34 +76,39 @@
       position: relative;
       z-index: 1;
     }
-    @media (max-width: 768px){
-      top:50%;
+
+    @media (max-width: 768px) {
+      top: 50%;
     }
   }
-
 
   .mainTitle {
     color: white;
     font-size: 5vw;
     font-weight: 300;
     margin: 0;
+
     @media screen and (max-width: 768px) {
       font-size: 45px;
-      margin-top:20vh;
+      margin-top: 20vh;
     }
-    p{
-      margin:10px;
+
+    p {
+      margin: 10px;
     }
   }
+
   .description {
     color: white;
     font-size: 24px;
     font-weight: 300;
+
     p {
       margin: 0px;
       margin-bottom: 10px;
     }
   }
+
   .bottomForm {
     background: rgba(255, 255, 255, 0.15);
     position: absolute;
@@ -113,48 +118,52 @@
     display: flex;
     flex-direction: row;
     padding-top: 20px;
-    padding-bottom:20px;
+    padding-bottom: 20px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    .rightDiv{
+
+    .rightDiv {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 0;
 
-      .bigTitle{
-        font-size: 48px;
-        margin:0;
-        color:white;
+      .bigTitle {
+        font-size: 40px;
+        margin: 0;
+        color: white;
         font-weight: bold;
-        line-height:36px;
+        line-height: 36px;
       }
     }
-    .leftDiv{
+
+    .leftDiv {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       @media screen and (max-width: 768px) {
         width: 100%;
         flex-direction: row;
-        gap:5px;
+        gap: 5px;
       }
     }
   }
 }
-.smallTitlte{
-  font-size:18px;
+
+.smallTitlte {
+  font-size: 18px;
   font-weight: 300;
   margin: 0;
-  color:white;
+  color: white;
 }
 
-@media screen and (max-width:450px){
-  .landing{
-    height: 1000PX;
+@media screen and (max-width: 450px) {
+  .landing {
+    height: 1000px;
     padding: 0 3vw;
   }
 }

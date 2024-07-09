@@ -1,26 +1,20 @@
 "use client";
 import Image from "next/image";
 import styles from "./style.module.scss";
-import { useRef, useLayoutEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { slideUp } from "./animation";
+import { useRef, useEffect } from "react";
+import { useViewportScroll, useTransform, motion } from "framer-motion";
 import Rounded from "../../common/RoundedButton";
 import Form from "../../components/Form/Form";
-import { motion } from "framer-motion";
 import StarsCanvas from "../../common/Stars/Stars";
+
 export default function Home() {
-  const firstText = useRef(null);
-  const secondText = useRef(null);
-  const slider = useRef(null);
-  let xPercent = 0;
-  let direction = -1;
+  const { scrollY } = useViewportScroll();
 
-
+  const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
+  const y2 = useTransform(scrollY, [0, 1000], [0, -50]);
 
   return (
     <motion.main
-      variants={slideUp}
       initial="initial"
       animate="enter"
       className={styles.landing}
@@ -41,17 +35,16 @@ export default function Home() {
         />
       </div>
       <div className={styles.mainContainer}>
-        <div data-scroll data-scroll-speed={0.1} className={styles.mainTitle}>
+        <motion.div style={{ y: y1 }} className={styles.mainTitle}>
           <p>
             זה הזמן להטיס
             <br />
             את העסק שלך לחלל
           </p>
-        <div data-scroll data-scroll-speed={0.04} className={styles.description}>
+        </motion.div>
+        <motion.div style={{ y: y2 }} className={styles.description}>
           <p>פיתוח ועיצוב אתרים שגורמים לפנדות לטוס לחלל</p>
-        </div>
-        </div>
-
+        </motion.div>
         <div className={styles.buttonContainer}>
           <Rounded className={styles.moreButton}>
             <p>דברו איתנו</p>
