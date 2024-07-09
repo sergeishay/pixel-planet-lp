@@ -1,98 +1,94 @@
-// styles/Services.module.scss
-
 .services {
-    text-align: center;
-    padding: 50px 20px;
-    background-size: cover;
-  
-    .title {
-      font-size: 2em;
-      margin-bottom: 40px;
-      color: white;
-      direction: rtl;
+  text-align: center;
+  padding: 50px 20px;
+  background-size: cover;
+
+  .title {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: white;
+    direction: rtl;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    position: relative;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    text-align: start;
+    transition: transform 0.3s;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    z-index: 1; /* Ensure the card is above any potential background elements */
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, #7d13ff, #2c52d1, #15bffd);
+      z-index: -1;
+      border-radius: 20px;
+      padding: 2px;
+      box-sizing: border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
     }
-  
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    &:hover {
+      transform: scale(1.05);
     }
-  
-    .card {
-      position: relative;
-      padding: 20px;
-      margin: 10px;
-      width: 300px;
-      color: white;
-      display: flex;
-      flex-direction: column;
+
+    .icon {
+      margin-bottom: 20px;
       justify-content: center;
       align-items: center;
-      direction: rtl;
-      text-align: start;
-      transition: transform 0.3s;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.12);
-  
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, #7D13FF, #2C52D1, #15BFFD);
-        z-index: -1;
-        border-radius: 20px; /* Match this value to the card's border-radius */
-        padding: 2px; /* Adjust this value to control the border thickness */
-        box-sizing: border-box;
-        -webkit-mask: 
-          linear-gradient(#fff 0 0) content-box, 
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-                mask-composite: exclude;
-      }
-  
-      &:hover {
-        transform: scale(1.05);
-      }
-  
-      .icon {
-        margin-bottom: 20px;
-        justify-content: center;
-        align-items: center;
-      }
-  
-      .cardTitle {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-  
-      .description {
-        font-size: 1em;
-        margin-bottom: 20px;
-      }
-  
-      .button {
-        background: #ffffff;
-        border: none;
-        border-radius: 10px;
-        padding: 10px 20px;
-        color: #0c1144;
-        cursor: pointer;
-        transition: background 0.3s;
-  
-        &:hover {
-          background: #f0f0f0;
-        }
-      }
     }
-  
-    @media (max-width: 768px) {
-      .cards {
-        flex-direction: column;
-        align-items: center;
+
+    .cardTitle {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      background: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      color: #0c1144;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #f0f0f0;
       }
     }
   }
-  
+
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

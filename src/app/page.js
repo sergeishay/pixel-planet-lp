@@ -9,7 +9,7 @@ import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import Services from '../components/Services/Services';
 import MainProjects from '../components/MainProjects/MainProjects';
-
+import Carousel from '../components/Carousel/Carousel'
 
 
 export default function Home() {
@@ -40,6 +40,7 @@ export default function Home() {
       <Description />
       <Services />
       <MainProjects />
+      <Carousel />
       <SlidingImages />
       <Contact />
     </main>

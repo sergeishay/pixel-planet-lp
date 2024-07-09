@@ -5,6 +5,7 @@
     padding-bottom:40px;
     display: flex;
     justify-content: center;
+    align-self: center;
     flex-direction: column;
     direction: rtl;
     background-color: rgba(12, 17, 68, 0.78);
@@ -25,6 +26,33 @@
         position: relative;
         direction: rtl;
         justify-content: center;
+        .button{
+            position: relative;
+            width: 180px;
+            height: 80px;
+            background-color: #1C1D20;
+            color: white;
+            border-radius: 60px;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            background-color: #00C2FF;
+            justify-content: center;
+            align-self: center;
+            cursor: pointer;
+        
+            @media screen and (max-width:450px) {
+                width: 180px;
+                height: 80px;
+            }
+            p{
+                margin: 0px;
+                font-size: 16px;
+                font-weight: 300;
+                position: relative;
+                z-index: 1;
+            }
+        }
         p{
             margin: 0px;
             &:nth-of-type(1){
@@ -48,36 +76,12 @@
                 font-weight: 300;
             }
         }
-        .button{
-            top: 80%;
-            left: calc(100% - 200px); 
-            width: 180px;
-            height: 180px;
-            background-color: #1C1D20;
-            color: white;
-            border-radius: 50%;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            @media screen and (max-width:450px) {
-                width:100px;
-                height:100px;
-                left: calc(100% - 150px); 
-            }
-            p{
-                margin: 0px;
-                font-size: 16px;
-                font-weight: 300;
-                position: relative;
-                z-index: 1;
-            }
-        }
+
     }
     .moreWork{
         padding: 20px;
         border-radius: 40px;
         border: 1px solid grey;
     }
+    
 }
