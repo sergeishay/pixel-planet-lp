@@ -4,7 +4,10 @@
   height: 120vh;
   overflow: hidden;
   padding: 0 6vw;
+  @media screen and (min-width: 1568px) {
+  height: 100vh;
 
+  }
   .desktopImage {
     display: none;
   }
