@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
 
-const words = ["שלום","Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "שלום"]
+const words = ["שלום","Hello", "Bonjour", "Ciao", "Olà", "やあ", "Guten tag", "שלום"]
 
 export default function Index() {
     const [index, setIndex] = useState(0);
@@ -39,7 +39,7 @@ export default function Index() {
         <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
             {dimension.width > 0 && 
             <>
-                <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
+                <motion.p variants={opacity} initial="initial" animate="enter">{words[index]}</motion.p>
                 <svg>
                     <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
                 </svg>
