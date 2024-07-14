@@ -129,6 +129,23 @@
     justify-content: center;
     flex-wrap: wrap;
 
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px; /* Adjust the height as needed */
+      background: linear-gradient(45deg, #7d13ff, #2c52d1, #15bffd);
+    }
+    &::before {
+      top: 0;
+    }
+  
+    &::after {
+      bottom: 0;
+    }
+
     .rightDiv {
       display: flex;
       flex-direction: column;

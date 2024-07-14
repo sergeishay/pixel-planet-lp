@@ -5,38 +5,38 @@ import Image from "next/image";
 
 const slider1 = [
   {
-    color: "#e3e5e7",
+    color: "rgba(255, 255, 255, 0.25)",
     src: "unicorn.png",
   },
   {
-    color: "#d6d7dc",
+    color: "rgba(255, 255, 255, 0.25)",
     src: "sura.png",
   },
   {
-    color: "#e3e3e3",
+    color: "rgba(255, 255, 255, 0.25)",
     src: "nova.png",
   },
   {
-    color: "#21242b",
+    color: "rgba(255, 255, 255, 0.25)",
     src: "manchila.png",
   },
 ];
 
 const slider2 = [
   {
-    color: "#d4e3ec",
+    color: "rgba(255, 255, 255, 0.25)",
     src: "manchila.png",
   },
   {
-    color: "#e5e0e1",
+    color: "rgba(255, 255, 255, 0.25)",
     src: "haison2.png",
   },
   {
-    color: "#d7d4cf",
+    color: "rgba(255, 255, 255, 0.25)",
     src: "game.png",
   },
   {
-    color: "#e1dad6",
+    color: "rgba(255, 255, 255, 0.25)",
     src: "manchila.png",
   },
 ];
@@ -93,9 +93,9 @@ export default function SlideImages() {
             );
           })}
         </motion.div>
-        <motion.div style={{ height }} className={styles.circleContainer}>
+        {/* <motion.div style={{ height }} className={styles.circleContainer}>
           <div className={styles.circle}></div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

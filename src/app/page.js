@@ -10,7 +10,7 @@ import Contact from '../components/Contact';
 import Services from '../components/Services/Services';
 import MainProjects from '../components/MainProjects/MainProjects';
 import Carousel from '../components/Carousel/Carousel'
-
+import Clients from '../components/Clients/Clients';
 
 export default function Home() {
 
@@ -39,8 +39,8 @@ export default function Home() {
       <Landing />
       <Description />
       <Services />
-      <MainProjects />
       <Carousel />
+      <Clients />
       <SlidingImages />
       <Contact />
     </main>

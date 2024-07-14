@@ -126,6 +126,7 @@ const Carousel = () => {
                 src="/images/haison-carusel.jpg"
                 width={700}
                 height={700}
+                quality={100}
               />
             </motion.div>
             <motion.div
