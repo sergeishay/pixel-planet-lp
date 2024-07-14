@@ -1,0 +1,41 @@
+@keyframes lavaLamp {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .whatsappButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #7D13FF, #2C52D1, #15BFFD);
+    background-size: 200% 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: lavaLamp 4s ease infinite;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  
+    img {
+        padding-top: 5px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  

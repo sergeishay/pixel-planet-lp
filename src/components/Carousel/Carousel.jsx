@@ -126,7 +126,7 @@ const Carousel = () => {
               <Image
                 className={styles.first}
                 alt="first image"
-                src="/images/haison-carusel.jpg"
+                src="/images/haison-carusel.webp"
                 width={700}
                 height={700}
                 quality={100}
@@ -153,7 +153,7 @@ const Carousel = () => {
               <Image
                 className={styles.second}
                 alt="second image"
-                src="/images/cotton-carusel.jpg"
+                src="/images/cotton-carusel.webp"
                 width={700}
                 height={700}
                 quality={100}
@@ -181,7 +181,7 @@ const Carousel = () => {
               <Image
                 className={styles.third}
                 alt="third image"
-                src="/images/bank-carusel.jpg"
+                src="/images/bank-carusel.webp"
                 width={700}
                 height={700}
                 quality={100}

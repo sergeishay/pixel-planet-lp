@@ -68,6 +68,7 @@ export default function SlideImages() {
                     fill={true}
                     alt={"image"}
                     src={`/images/${project.src}`}
+                    quality={100}
                   />
                 </div>
               </div>
@@ -87,15 +88,15 @@ export default function SlideImages() {
                     fill={true}
                     alt={"image"}
                     src={`/images/${project.src}`}
+                    quality={100}
+
                   />
                 </div>
               </div>
             );
           })}
         </motion.div>
-        {/* <motion.div style={{ height }} className={styles.circleContainer}>
-          <div className={styles.circle}></div>
-        </motion.div> */}
+
       </div>
     </div>
   );

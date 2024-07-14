@@ -11,7 +11,7 @@ import Services from '../components/Services/Services';
 import MainProjects from '../components/MainProjects/MainProjects';
 import Carousel from '../components/Carousel/Carousel'
 import Clients from '../components/Clients/Clients';
-
+import Whatsapp from '../components/Whatsapp/Whatsapp';
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +42,7 @@ export default function Home() {
       <Services />
       <Carousel />
       <SlidingImages />
+      <Whatsapp />
       <Contact />
     </main>
   )
