@@ -34,10 +34,12 @@ export default function Contact() {
             <p className={styles.smallTitlte}>תל אביב, ישראל</p>
           </div>
           <div className={styles.leftSection}>
+            <p>השאירו פרטים ונחזור אליכם בהקדם</p>
             <Form isFooter={true} />
           </div>
         </div>
         <div className={styles.nav}>
+        
           <Image className={styles.logoFooter} src="/images/logo.svg" alt="logo" width="300" height="100" />
           <p className={styles.smallTitlte}>change everything on web</p>
           <div className={styles.social}>

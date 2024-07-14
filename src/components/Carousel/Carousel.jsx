@@ -31,25 +31,25 @@ const Carousel = () => {
   const texts = [
     {
       title: "hs-law",
-      description: "עיצוב ופיתוח אתר תדמית מרשים עבור משרד עורכי דין המתמחה בדיני עבודה ודיני חברות. האתר משדר אמינות ומקצועיות, ומאפשר ללקוחות פוטנציאליים לקבל את כל המידע הנחוץ להם בצורה נוחה וברורה.",
+      description:
+        "עיצוב ופיתוח אתר תדמית מרשים עבור משרד עורכי דין המתמחה בדיני עבודה ודיני חברות. האתר משדר אמינות ומקצועיות, ומאפשר ללקוחות פוטנציאליים לקבל את כל המידע הנחוץ להם בצורה נוחה וברורה.",
       service: "עיצוב ופיתוח אתר תדמית",
-      liveLink: "https://hs-law.co.il/"
-    }    
-    ,
+      liveLink: "https://hs-law.co.il/",
+    },
     {
       title: "cotton-club",
-      description: "עיצוב ופיתוח דף נחיתה עבור COTTON CLUB, חלל אורבני ואלגנטי מבית 'הנסיך'. המקום נולד מתוך הרצון לייצר מקום עכשווי לאירועים, תכנים, תרבות, בילויים ואוכל. האתר מציג את כל המידע הדרוש לאירועים מיוחדים בצורה אטרקטיבית ומזמינה.",
+      description:
+        "עיצוב ופיתוח דף נחיתה עבור COTTON CLUB, חלל אורבני ואלגנטי מבית 'הנסיך'. המקום נולד מתוך הרצון לייצר מקום עכשווי לאירועים, תכנים, תרבות, בילויים ואוכל. האתר מציג את כל המידע הדרוש לאירועים מיוחדים בצורה אטרקטיבית ומזמינה.",
       service: "עיצוב ופיתוח דף נחיתה",
-      liveLink: "https://cotton-club.co.il"
-    }    
-    ,
+      liveLink: "https://cotton-club.co.il",
+    },
     {
       title: "hoobank",
-      description: "עיצוב ופיתוח דף נחיתה מודרני ואינטואיטיבי לבנק Hoobank, המספק שירותים פיננסיים מתקדמים ללקוחותיו. האתר מציג את השירותים השונים של הבנק בצורה ברורה ונוחה לשימוש, ומשדר חדשנות וביטחון.",
+      description:
+        "עיצוב ופיתוח דף נחיתה מודרני ואינטואיטיבי לבנק Hoobank, המספק שירותים פיננסיים מתקדמים ללקוחותיו. האתר מציג את השירותים השונים של הבנק בצורה ברורה ונוחה לשימוש, ומשדר חדשנות וביטחון.",
       service: "עיצוב ופיתוח דף נחיתה",
-      liveLink: "https://bank-demo.sergei-lp.com/"
-    }    
-    ,
+      liveLink: "https://bank-demo.sergei-lp.com/",
+    },
   ];
 
   // defining text animation
@@ -75,7 +75,8 @@ const Carousel = () => {
   };
 
   return (
-    <div id="projects"  className={styles.carouselContainer}>
+    <div id="projects" className={styles.carouselContainer}>
+        <h2 className={styles.titleCarousel}>פרויקטים נבחרים</h2>
       <div className={styles.topCarousel}>
         <motion.div
           className={styles.contentContainer}
@@ -97,10 +98,14 @@ const Carousel = () => {
           <div className={styles.divider}></div>
 
           <div className={styles.buttonContainer}>
-            <Link href={texts[activeIndex].liveLink} target="_blank" className={styles.LiveSite}>אתר לייב</Link>
+            <Link
+              href={texts[activeIndex].liveLink}
+              target="_blank"
+              className={styles.LiveSite}
+            >
+              אתר לייב
+            </Link>
           </div>
-
-
         </motion.div>
         <div className={styles.imageWrapper}>
           <div className={styles.imagesContainer}>
@@ -151,6 +156,7 @@ const Carousel = () => {
                 src="/images/cotton-carusel.jpg"
                 width={700}
                 height={700}
+                quality={100}
               ></Image>
             </motion.div>
             <motion.div
@@ -178,6 +184,7 @@ const Carousel = () => {
                 src="/images/bank-carusel.jpg"
                 width={700}
                 height={700}
+                quality={100}
               ></Image>
             </motion.div>
           </div>

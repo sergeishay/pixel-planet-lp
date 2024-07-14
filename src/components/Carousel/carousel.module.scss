@@ -8,6 +8,11 @@
   overflow: hidden;
   color: white;
   padding: 0 10vw;
+  .titleCarousel {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: white;
+  }
   .topCarousel {
     display: flex;
     align-items: center;
@@ -169,7 +174,7 @@
 
 @media screen and (max-width: 950px) {
   .carouselContainer {
-    height: 1100px;
+    height: 800px;
     position: relative;
     flex-direction: column;
     .topCarousel {
@@ -183,7 +188,8 @@
       align-items: center;
       justify-content: center;
       position: absolute;
-      top:25%;
+
+      top:26%;
       width: 100%;
       direction: ltr;
       .controls {
@@ -204,7 +210,9 @@
       }
     }
     .contentContainer {
-      padding: 12rem 0 5rem 0;
+      padding: 9rem 0 4rem 0;
+
+
     }
     .imagesContainer {
       display: flex;

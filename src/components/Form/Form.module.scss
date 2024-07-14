@@ -42,7 +42,7 @@ $form-background-opacity: 0.13;
   color: white;
   width: 200px;
   border-radius: $form-border-radius;
-  padding: 15px;  /* Ensure the padding matches the select field */
+  padding: 10px;
   flex: 1 1 0;
 
   @media (max-width: 768px) {
@@ -69,7 +69,7 @@ $form-background-opacity: 0.13;
   color: white;
   width: 600px;
   border-radius: $form-border-radius;
-  padding: 15px;  /* Ensure the padding matches the input fields */
+  padding: 15px;
   flex: 1;
 
   @media (max-width: 768px) {
@@ -97,16 +97,16 @@ $form-background-opacity: 0.13;
   appearance: none;
   padding: 15px;
   position: relative;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
   background-repeat: no-repeat;
-  background-position: right 15px center;
+  background-position: left 15px center;
 
   option {
     background-color: #0C1144;
   }
 
   @media (max-width: 768px) {
-    padding: 15px;  /* Ensure the padding is consistent on mobile */
+    padding: 15px;
   }
 }
 
@@ -152,6 +152,8 @@ $form-background-opacity: 0.13;
 
 .inputDiv {
   display: flex;
+
+  position: relative;
 
 }
 

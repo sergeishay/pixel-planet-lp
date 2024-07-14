@@ -93,9 +93,9 @@ const Form = ({ isFooter }) => {
             onChange={handleChange}
             className={styles.select}
           >
-            <option value="web development">Web Development</option>
-            <option value="design">Design</option>
-            <option value="marketing">Marketing</option>
+            <option value="web development">פיתוח אתרים</option>
+            <option value="design">עיצוב</option>
+            <option value="marketing">מיתוג וסושיאל</option>
           </select>
           {errors.service && (
             <span className={styles.error}>{errors.service}</span>
