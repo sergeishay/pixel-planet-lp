@@ -4,11 +4,11 @@ import styles from "./Clients.module.scss";
 
 const clients = [
   {
-    image: "/images/ysbatim.svg",
+    image: "/images/ysbatim.png",
     title: 'ysbatim'
   },
   {
-    image: "/images/suramare.svg",
+    image: "/images/suramare.png",
     title: 'suramare'
   },
   {
@@ -20,11 +20,11 @@ const clients = [
     title: 'bestie'
   },
   {
-    image: "/images/cotton.svg",
+    image: "/images/cotton-logo.png",
     title: 'cotton'
   },
   {
-    image: "/images/rahav.svg",
+    image: "/images/rahav.png",
     title: 'rahav'
   },
 ];
@@ -40,9 +40,10 @@ const Clients = () => {
               src={client.image}
               alt={client.title}
               layout="responsive"
-              width={150}
-              height={70}
+              width={100}
+              height={50}
               className={styles.image}
+              style={{objectFit: "contain"}}
             />
           </div>
         ))}

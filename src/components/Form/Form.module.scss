@@ -1,9 +1,7 @@
-// styles/Form.module.scss
-
 $form-border-radius: 50px;
 $form-color: #ffffff;
 $form-border-color: #ffffff;
-$form-background-opacity: 0.2;
+$form-background-opacity: 0.13;
 
 .form {
   display: flex;
@@ -20,32 +18,31 @@ $form-background-opacity: 0.2;
     max-width: 800px;
   }
 }
-.form2{
+
+.form2 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
   color: $form-color;
   width: 100%;
-  margin:0 50px ;
+  margin: 0 50px;
 
   @media (min-width: 768px) {
-  flex-direction: column;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    // max-width: 810px;
     margin: 0;
   }
-
 }
 
 .input {
   background: rgba(18, 13, 82, $form-background-opacity);
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
   width: 200px;
   border-radius: $form-border-radius;
-  padding: 10px;
+  padding: 15px;  /* Ensure the padding matches the select field */
   flex: 1 1 0;
 
   @media (max-width: 768px) {
@@ -64,14 +61,15 @@ $form-background-opacity: 0.2;
     box-shadow: none;
   }
 }
+
 .input2,
 .select {
-  background: rgba(18, 13, 82, $form-background-opacity);
-  border: 1px solid white;
+  background: rgba(255, 255, 255, $form-background-opacity);
+  border: 2px solid white;
   color: white;
   width: 600px;
   border-radius: $form-border-radius;
-  padding: 15px 0 15px 0;
+  padding: 15px;  /* Ensure the padding matches the input fields */
   flex: 1;
 
   @media (max-width: 768px) {
@@ -82,7 +80,7 @@ $form-background-opacity: 0.2;
 
   &::placeholder {
     color: white;
-    padding-right:10px;
+    padding-right: 10px;
   }
 
   &:focus,
@@ -92,9 +90,26 @@ $form-background-opacity: 0.2;
   }
 }
 
-.select{
+.select {
+  background-color: rgba(255, 255, 255, $form-background-opacity);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 15px;
+  position: relative;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+
+  option {
+    background-color: #0C1144;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px;  /* Ensure the padding is consistent on mobile */
+  }
 }
+
 .button {
   background: #00c2ff;
   border: none;
@@ -104,6 +119,7 @@ $form-background-opacity: 0.2;
   cursor: pointer;
   flex: 1;
   transition: all 0.5s;
+
   &:hover {
     background: #9945ff;
   }
@@ -112,10 +128,11 @@ $form-background-opacity: 0.2;
     flex: none;
   }
 }
-.button2{
+
+.button2 {
   background: #00c2ff;
   border: none;
-  width:150px;
+  width: 150px;
   align-self: flex-end;
   border-radius: $form-border-radius;
   padding: 15px 20px;
@@ -123,6 +140,7 @@ $form-background-opacity: 0.2;
   cursor: pointer;
   flex: 1;
   transition: all 0.5s;
+
   &:hover {
     background: #9945ff;
   }
@@ -130,18 +148,12 @@ $form-background-opacity: 0.2;
   @media (max-width: 768px) {
     flex: none;
   }
-
 }
 
 .inputDiv {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  align-items: flex-start;
 
- }
-
+}
 
 .error {
   background-color: red;

@@ -27,7 +27,7 @@ const projects = [
 
 const MainProjects = () => {
   return (
-    <div id="projects" className={styles.projects}>
+    <div className={styles.projects}>
       <h2 className={styles.title}>פרויקטים נבחרים</h2>
       <div className={styles.cards}>
         {projects.map((project, index) => (

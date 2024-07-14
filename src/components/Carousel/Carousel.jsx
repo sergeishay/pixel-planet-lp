@@ -30,28 +30,26 @@ const Carousel = () => {
   // array for titles and descriptions
   const texts = [
     {
-      title: "Immersive gaming experience",
-      description:
-        "adipisicing elit. Iure doloremque aut ratione eos!\
-        Laudantium ",
-        service:"עיצוב ופיתוח דף נחיתה",
-        liveLink:"https://hs-law.co.il/"
-    },
+      title: "hs-law",
+      description: "עיצוב ופיתוח אתר תדמית מרשים עבור משרד עורכי דין המתמחה בדיני עבודה ודיני חברות. האתר משדר אמינות ומקצועיות, ומאפשר ללקוחות פוטנציאליים לקבל את כל המידע הנחוץ להם בצורה נוחה וברורה.",
+      service: "עיצוב ופיתוח אתר תדמית",
+      liveLink: "https://hs-law.co.il/"
+    }    
+    ,
     {
-      title: "On demand support when you need it",
-      description:
-        "doloremque aut ratione eos! Laudantium ipsum velit, modi quae repudiandae, in quidem iste cupiditate sequi expedita placeat quam rerum, optio facilis. Officia iure quo illo eligendi. Perspiciatis voluptatibus itaque natus maiores alias vitae, reprehenderit distinctio cupiditate libero fugiat aut architecto ratione?",
-        service:"עיצוב ופיתוח דף נחיתה",
-        liveLink:"https://cotton-club.co.il"
-    },
+      title: "cotton-club",
+      description: "עיצוב ופיתוח דף נחיתה עבור COTTON CLUB, חלל אורבני ואלגנטי מבית 'הנסיך'. המקום נולד מתוך הרצון לייצר מקום עכשווי לאירועים, תכנים, תרבות, בילויים ואוכל. האתר מציג את כל המידע הדרוש לאירועים מיוחדים בצורה אטרקטיבית ומזמינה.",
+      service: "עיצוב ופיתוח דף נחיתה",
+      liveLink: "https://cotton-club.co.il"
+    }    
+    ,
     {
-      title: "Accessible and inclusive to all",
-      description:
-        "Laudantium ipsum velit, modi quae repudiandae, in quidem iste cupiditate sequi expedita placeat quam rerum, optio facilis. Officia iure quo illo eligendi. Perspiciatis voluptatibus itaque natus maiores alias vitae, reprehenderit distinctio cupiditate libero fugiat aut architecto ratione?",
-        service:"עיצוב ופיתוח דף נחיתה",
-        liveLink:"https://bank-demo.sergei-lp.com/"
-
-    },
+      title: "hoobank",
+      description: "עיצוב ופיתוח דף נחיתה מודרני ואינטואיטיבי לבנק Hoobank, המספק שירותים פיננסיים מתקדמים ללקוחותיו. האתר מציג את השירותים השונים של הבנק בצורה ברורה ונוחה לשימוש, ומשדר חדשנות וביטחון.",
+      service: "עיצוב ופיתוח דף נחיתה",
+      liveLink: "https://bank-demo.sergei-lp.com/"
+    }    
+    ,
   ];
 
   // defining text animation
@@ -77,7 +75,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className={styles.carouselContainer}>
+    <div id="projects"  className={styles.carouselContainer}>
       <div className={styles.topCarousel}>
         <motion.div
           className={styles.contentContainer}

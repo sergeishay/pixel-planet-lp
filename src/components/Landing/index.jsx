@@ -25,6 +25,7 @@ export default function Home() {
           src="/images/panda.webp"
           fill={true}
           alt="background"
+          quality={100}
         />
       </div>
       <div className={styles.mobileImage}>
@@ -32,6 +33,8 @@ export default function Home() {
           src="/images/mobile-hero.jpg"
           fill={true}
           alt="background for mobile"
+          quality={100}
+
         />
       </div>
       <div className={styles.mainContainer}>
