@@ -65,7 +65,7 @@
       align-items: flex-start;
 
       @media screen and (max-width: 768px) {
-        padding-right: 100px;
+        padding-right: 70px;
       }
 
       a {
@@ -104,8 +104,16 @@
 
       @media screen and (max-width: 768px) {
         width: 100%;
-        flex-direction: row;
+        flex-direction: column;
+        padding:25px ;
+        margin:0 25px 0 25px;
+        justify-content: center;
+        align-items: center;
         gap: 5px;
+      }
+      p{
+        font-size: 19px;
+        line-height:17px;
       }
     }
 

@@ -209,19 +209,29 @@
     height: 800px;
     position: relative;
     flex-direction: column;
+    margin-top:50px;
+    .titleCarousel {
+      position: absolute;
+      top:0;
+      font-size: 2em;
+      margin-bottom: 60px;
+      color: white;
+    }
     .topCarousel {
       flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
       width: 350px;
+      margin-top: 70px;
     }
+
     .bottomCarousel {
       display: flex;
       align-items: center;
       justify-content: center;
       position: absolute;
 
-      top:26%;
+      top:27%;
       width: 100%;
       direction: ltr;
       .controls {
