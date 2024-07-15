@@ -19,9 +19,9 @@ export const metadata = {
     siteName: 'Pixel Planet',
     images: [
       {
-        url: '/main-image.jpg',
-        width: 800,
-        height: 600,
+        url: 'https://lp.pixel-planet.co.il/main-image.jpg', 
+        width: 1200,
+        height: 630,
         alt: 'Pixel Planet',
       },
     ],
@@ -34,9 +34,9 @@ export const metadata = {
     description: 'הפכו את העסק שלכם למותג מוביל עם עיצוב ופיתוח אתרים ב-Planet Pixel. פתרון כולל לכל פרויקט.',
     images: [
       {
-        url: '/main-image.jpg',
-        width: 800,
-        height: 600,
+        url: 'https://lp.pixel-planet.co.il/main-image.jpg', 
+        width: 1200,
+        height: 630,
         alt: 'Pixel Planet',
       },
     ],
