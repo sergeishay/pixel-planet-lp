@@ -42,7 +42,7 @@ export default function Home() {
           </p>
         </motion.div>
         <motion.div style={{ y: y2 }} className={styles.description}>
-          <p>פיתוח ועיצוב אתרים שגורמים לפנדות לטוס לחלל</p>
+          <p>פיתוח ועיצוב אתרים, אפלקציות וכל מה שמעבר</p>
         </motion.div>
         <div className={styles.buttonContainer}>
           <Link href="#contact">
