@@ -25,8 +25,8 @@ export default function Contact() {
               דברו
               <br /> איתנו
             </p>
-            <Link href="mailto:pixelplanet@gmail.com">
-              <p className={styles.smallTitlte}>pixelplanet@gmail.com</p>
+            <Link href="mailto:info@pixel-planet.co.il">
+              <p className={styles.smallTitlte}>info@pixel-planet.co.il</p>
             </Link>
             <Link href="tel:0549093350">
               <p className={styles.smallTitlte}>0549093350</p>
