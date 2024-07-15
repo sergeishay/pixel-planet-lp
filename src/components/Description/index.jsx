@@ -3,7 +3,7 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import { slideUp, opacity } from "./animation";
 import Rounded from "../../common/RoundedButton";
-
+import Link from "next/link";
 export default function Description() {
   const phrase =
     "ברוכים הבאים ל-Planet Pixel - המקום בו חלומות דיגיטליים הופכים למציאות.אנו צוות מומחים דיגיטליים המתמחים בעיצוב ופיתוח אתרים, ומאמינים בלהפוך עסקים למותגים מובילים. אנו מציעים פתרון כולל לכל סוגי הפרויקטים, מהקטנים ועד הגדולים ביותר, עם דגש על טכנולוגיות מתקדמות וחוויית משתמש יוצאת דופן.הצטרפו אלינו למסע של צמיחה דיגיטלית והפכו את העסק שלכם לכוכב זוהר בשמי האינטרנט.";
@@ -31,10 +31,11 @@ export default function Description() {
             );
           })}
         </p>
-        <div></div>
+        <Link href="#contact" >
         <Rounded className={styles.button}>
           <p>אני רוצה פרטים</p>
         </Rounded>
+        </Link>
       </div>
     </div>
   );

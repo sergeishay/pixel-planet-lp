@@ -2,23 +2,20 @@
 import Image from "next/image";
 import styles from "./style.module.scss";
 import { useRef, useEffect } from "react";
-import { useViewportScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import Rounded from "../../common/RoundedButton";
 import Form from "../../components/Form/Form";
 import StarsCanvas from "../../common/Stars/Stars";
+import Link from "next/link";
 
 export default function Home() {
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
 
   const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
   const y2 = useTransform(scrollY, [0, 1000], [0, -50]);
 
   return (
-    <motion.main
-      initial="initial"
-      animate="enter"
-      className={styles.landing}
-    >
+    <motion.main initial="initial" animate="enter" className={styles.landing}>
       <div className={styles.desktopImage}>
         <Image
           className={styles.panda}
@@ -34,7 +31,6 @@ export default function Home() {
           fill={true}
           alt="background for mobile"
           quality={100}
-
         />
       </div>
       <div className={styles.mainContainer}>
@@ -49,9 +45,11 @@ export default function Home() {
           <p>פיתוח ועיצוב אתרים שגורמים לפנדות לטוס לחלל</p>
         </motion.div>
         <div className={styles.buttonContainer}>
-          <Rounded className={styles.moreButton}>
-            <p>דברו איתנו</p>
-          </Rounded>
+          <Link href="#contact">
+            <Rounded className={styles.moreButton}>
+              <p>דברו איתנו</p>
+            </Rounded>
+          </Link>
         </div>
         <div className={styles.bottomForm}>
           <div className={styles.rightDiv}>
@@ -59,10 +57,7 @@ export default function Home() {
             <p className={styles.bigTitle}>דברו איתנו</p>
           </div>
           <Form isFooter={false} />
-          <div className={styles.leftDiv}>
-
-
-          </div>
+          <div className={styles.leftDiv}></div>
         </div>
       </div>
       <StarsCanvas />

@@ -48,6 +48,13 @@ export default function Header() {
     });
   }, []);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div ref={header} className={styles.header}>
@@ -55,25 +62,15 @@ export default function Header() {
           <Image src="/images/logo.svg" width={250} height={50} alt="logo" />
         </div>
         <div className={styles.nav}>
-          <button className={styles.headerContact}>
+          <button className={styles.headerContact} onClick={scrollToContact}>
             קבל הצעת מחיר
           </button>
           <Magnetic>
             <div className={styles.el}>
-              <Link href="tel:0549093350">
-                <Image
-                  src="/images/facebook.svg"
-                  width={20}
-                  height={20}
-                  alt="logo"
-                />
-              </Link>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
-          <Magnetic>
-            <div className={styles.el}>
-              <Link href="tel:0549093350">
+              <Link
+                href="https://www.instagram.com/pixel_planet_digital?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+              >
                 <Image
                   src="/images/instagram.svg"
                   width={20}
@@ -86,22 +83,9 @@ export default function Header() {
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <Link href="tel:0549093350">
+              <Link href="https://wa.me/+972549093350" target="_blank">
                 <Image
                   src="/images/whatsapp.svg"
-                  width={20}
-                  height={20}
-                  alt="logo"
-                />
-              </Link>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
-          <Magnetic>
-            <div className={styles.el}>
-              <Link href="tel:0549093350">
-                <Image
-                  src="/images/github.svg"
                   width={20}
                   height={20}
                   alt="logo"

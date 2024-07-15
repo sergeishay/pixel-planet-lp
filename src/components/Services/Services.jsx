@@ -27,7 +27,7 @@ const servicesData = [
 const Services = () => {
   return (
     <div className={styles.services}>
-      <h2 className={styles.title}>איך אנחנו יכולים לעזור לכם?</h2>
+      <h2 className={styles.title}>השירותים שלנו</h2>
       <div className={styles.cards}>
         {servicesData.map((service, index) => (
           <Card key={index} service={service} index={index} />
