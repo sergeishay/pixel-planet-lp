@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./Form.module.scss";
 import { validateForm } from "../../helpers/formValidation";
+import Popup from "../Popup/Popup";
 
 const Form = ({ isFooter }) => {
   const [formData, setFormData] = useState({
@@ -13,9 +14,11 @@ const Form = ({ isFooter }) => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setFormData({
       ...formData,
       [name]: value,
@@ -36,6 +39,7 @@ const Form = ({ isFooter }) => {
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
+            setIsPopupOpen(true);
           },
           (error) => {
             console.log("FAILED...", error);
@@ -47,69 +51,72 @@ const Form = ({ isFooter }) => {
   };
 
   return (
-    <form
-      className={isFooter ? styles.form2 : styles.form}
-      onSubmit={handleSubmit}
-    >
-      <div className={styles.inputDiv}>
-        <input
-          type="text"
-          name="name"
-          placeholder="שם מלא"
-          value={formData.name}
-          onChange={handleChange}
-          className={isFooter ? styles.input2 : styles.input}
-        />
-        {errors.name && <span className={styles.error}>{errors.name}</span>}
-      </div>
-      <div className={styles.inputDiv}>
-        <input
-          type="text"
-          name="phone"
-          placeholder="טלפון"
-          value={formData.phone}
-          onChange={handleChange}
-          className={isFooter ? styles.input2 : styles.input}
-        />
-        {errors.phone && <span className={styles.error}>{errors.phone}</span>}
-      </div>
-      <div className={styles.inputDiv}>
-        <input
-          type="email"
-          name="email"
-          placeholder="אימייל"
-          value={formData.email}
-          onChange={handleChange}
-          className={isFooter ? styles.input2 : styles.input}
-        />
-        {errors.email && <span className={styles.error}>{errors.email}</span>}
-      </div>
-
-      {isFooter && (
-        <div className={styles.inputDiv}>
-          <select
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            className={styles.select}
-          >
-            <option value="web development">פיתוח אתרים</option>
-            <option value="design">עיצוב</option>
-            <option value="marketing">מיתוג וסושיאל</option>
-          </select>
-          {errors.service && (
-            <span className={styles.error}>{errors.service}</span>
-          )}
-        </div>
-      )}
-
-      <button
-        type="submit"
-        className={isFooter ? styles.button2 : styles.button}
+    <>
+      <form
+        className={isFooter ? styles.form2 : styles.form}
+        onSubmit={handleSubmit}
       >
-        דברו איתי
-      </button>
-    </form>
+        <div className={styles.inputDiv}>
+          <input
+            type="text"
+            name="name"
+            placeholder="שם מלא"
+            value={formData.name}
+            onChange={handleChange}
+            className={isFooter ? styles.input2 : styles.input}
+          />
+          {errors.name && <span className={styles.error}>{errors.name}</span>}
+        </div>
+        <div className={styles.inputDiv}>
+          <input
+            type="text"
+            name="phone"
+            placeholder="טלפון"
+            value={formData.phone}
+            onChange={handleChange}
+            className={isFooter ? styles.input2 : styles.input}
+          />
+          {errors.phone && <span className={styles.error}>{errors.phone}</span>}
+        </div>
+        <div className={styles.inputDiv}>
+          <input
+            type="email"
+            name="email"
+            placeholder="אימייל"
+            value={formData.email}
+            onChange={handleChange}
+            className={isFooter ? styles.input2 : styles.input}
+          />
+          {errors.email && <span className={styles.error}>{errors.email}</span>}
+        </div>
+
+        {isFooter && (
+          <div className={styles.inputDiv}>
+            <select
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className={styles.select}
+            >
+              <option value="web development">פיתוח אתרים</option>
+              <option value="design">עיצוב</option>
+              <option value="marketing">מיתוג וסושיאל</option>
+            </select>
+            {errors.service && (
+              <span className={styles.error}>{errors.service}</span>
+            )}
+          </div>
+        )}
+
+        <button
+          type="submit"
+          className={isFooter ? styles.button2 : styles.button}
+        >
+          דברו איתי
+        </button>
+      </form>
+      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+    </>
   );
 };
 
