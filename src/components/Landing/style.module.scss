@@ -82,7 +82,7 @@
     }
 
     @media (max-width: 768px) {
-      top: 50%;
+      top: 48%;
     }
   }
 
@@ -95,7 +95,7 @@
 
     @media screen and (max-width: 768px) {
       font-size: 45px;
-      margin-top: 20vh;
+      margin-top: 25vh;
     }
 
     p {
@@ -106,12 +106,21 @@
   .description {
     color: white;
     font-size: 24px;
+    text-shadow: 1px 1px 2px black;
     font-weight: 300;
 
     p {
       margin: 0px;
       margin-bottom: 10px;
       margin-right:10px;
+      br{
+        display: none;
+      }
+      @media screen and (max-width:450px){
+        br{
+          display: block;
+        }
+      }
     }
   }
 

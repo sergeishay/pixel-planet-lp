@@ -24,7 +24,7 @@ const clients = [
     title: 'cotton'
   },
   {
-    image: "/images/rahav.png",
+    image: "/images/rahav3.png",
     title: 'rahav'
   },
 ];
