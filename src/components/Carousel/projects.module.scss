@@ -1,0 +1,112 @@
+// styles/projects.module.scss
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  direction: rtl;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden;
+  .title {
+    font-size:40px;
+    margin-bottom: 40px;
+  }
+
+  .project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    width: 100%;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .imageContainer {
+      flex: 1 1 60%;
+      display: flex;
+      justify-content: center;
+
+      .projectImage {
+        object-fit: cover;
+        border: none;
+      }
+    }
+
+    .contentContainer {
+      flex: 1 1 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 20px;
+
+      .projectTitle {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .description {
+        font-size: 1em;
+        margin-bottom: 20px;
+        padding:0 0 0 40px;
+      }
+
+      .divider {
+        height: 4px;
+        background: linear-gradient(45deg, #7d13ff, #2c52d1, #15bffd);
+        margin-bottom: 20px;
+        width: 50%;
+      }
+
+      .buttonContainer {
+        margin-top: 20px;
+
+        .liveSite {
+          text-decoration: none;
+          color: white;
+          padding: 10px 20px;
+          border: solid 2px #00b7ff;
+          border-radius: 30px;
+
+          &:hover {
+            background-color: #00b7ff;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectsContainer {
+    padding: 0 5vw;
+
+    .project {
+      flex-direction: column;
+      text-align: center;
+
+      &.reverse {
+        flex-direction: column;
+      }
+      .description{
+        text-align: start;
+      }
+      .imageContainer,
+      .contentContainer {
+        flex: unset;
+        width: 100%;
+        padding: 0;
+
+        .projectImage {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

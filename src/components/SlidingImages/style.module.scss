@@ -5,8 +5,13 @@
   padding-bottom: 200px;
   overflow: hidden;
   background-color: #0c114400;
+  text-align: center;
 }
-
+.title {
+  color:white;
+  font-size:40px;
+  margin-bottom: 40px;
+}
 .slidingImages {
   display: flex;
   flex-direction: column;

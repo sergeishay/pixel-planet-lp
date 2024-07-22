@@ -54,6 +54,7 @@ export default function SlideImages() {
 
   return (
     <div className={styles.sliderBody}>
+    <h2 className={styles.title}>עוד שותפים למסע בין כוכבים</h2>
       <div ref={container} className={styles.slidingImages}>
         <motion.div style={{ x: x1 }} className={styles.slider}>
           {slider1.map((project, index) => {

@@ -38,6 +38,7 @@ export default function Home() {
           <p>
           בונים אתרים שיזניקו 
             <br />
+            {" "}
             את העסק שלכם לחלל
           </p>
         </motion.div>

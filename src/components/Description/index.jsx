@@ -12,7 +12,7 @@ export default function Description() {
   return (
     <div id="about" ref={description} className={styles.description}>
       <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
-        אז מי אנחנו?
+        סטודיו עיצוב ופיתוח - מתל אביב ועד הירח
       </motion.p>
       <div className={styles.body}>
         <p>
