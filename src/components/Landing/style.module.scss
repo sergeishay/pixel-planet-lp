@@ -23,10 +23,12 @@
   @media (min-width: 768px) {
     .desktopImage {
       display: block;
-      img {
+
+       img {
         object-fit: cover;
         object-position: top center;
         mix-blend-mode: screen;
+        transform: translateY(-8%); 
       }
     }
 
@@ -61,8 +63,8 @@
     z-index: 10;
     top: 65%;
     background-color: #00c2ff;
-    width: 180px;
-    height: 60px;
+    width: 160px;
+    height: 50px;
     color: white;
     border-radius: 50px;
     position: absolute;
@@ -75,8 +77,8 @@
     }
     p {
       margin: 0px;
-      font-size: 16px;
-      font-weight: 300;
+      font-size: 18px;
+      font-weight: bold;
       position: relative;
       z-index: 1;
     }
@@ -112,12 +114,12 @@
     p {
       margin: 0px;
       margin-bottom: 10px;
-      margin-right:10px;
-      br{
+      margin-right: 10px;
+      br {
         display: none;
       }
-      @media screen and (max-width:450px){
-        br{
+      @media screen and (max-width: 450px) {
+        br {
           display: block;
         }
       }
@@ -125,7 +127,7 @@
   }
 
   .bottomForm {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(14, 16, 85, 0.95);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -150,7 +152,7 @@
     &::before {
       top: 0;
     }
-  
+
     &::after {
       bottom: 0;
     }

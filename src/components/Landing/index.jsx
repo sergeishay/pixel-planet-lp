@@ -36,9 +36,9 @@ export default function Home() {
       <div className={styles.mainContainer}>
         <motion.div style={{ y: y1 }} className={styles.mainTitle}>
           <p>
-            זה הזמן להטיס
+          בונים אתרים שיזניקו 
             <br />
-            את העסק שלך לחלל
+            את העסק שלכם לחלל
           </p>
         </motion.div>
         <motion.div style={{ y: y2 }} className={styles.description}>

@@ -8,7 +8,6 @@ import Nav from "./nav";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Rounded from "../../common/RoundedButton";
-import Magnetic from "../../common/Magnetic";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -65,35 +64,7 @@ export default function Header() {
           <button className={styles.headerContact} onClick={scrollToContact}>
             קבל הצעת מחיר
           </button>
-          <Magnetic>
-            <div className={styles.el}>
-              <Link
-                href="https://www.instagram.com/pixel_planet_digital?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank"
-              >
-                <Image
-                  src="/images/instagram.svg"
-                  width={20}
-                  height={20}
-                  alt="logo"
-                />
-              </Link>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
-          <Magnetic>
-            <div className={styles.el}>
-              <Link href="https://wa.me/+972549093350" target="_blank">
-                <Image
-                  src="/images/whatsapp.svg"
-                  width={20}
-                  height={20}
-                  alt="logo"
-                />
-              </Link>
-              <div className={styles.indicator}></div>
-            </div>
-          </Magnetic>
+
         </div>
       </div>
       <div ref={button} className={styles.headerButtonContainer}>

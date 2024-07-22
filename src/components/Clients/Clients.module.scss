@@ -1,44 +1,58 @@
 .clients {
-    position: relative;
-    text-align: center;
-    // padding: 50px 20px;
-    direction: rtl;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    width: 100%;
-    overflow: hidden;
-    .title {
-      font-size: 2em;
-      margin-bottom: 40px;
-      color: white;
-    }
-  
-    .mainDiv {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-  
-    .client {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width:120px;
-      height: 90px;
-      
+  position: relative;
+  text-align: center;
+  // padding: 50px 20px;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(12, 17, 68);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(12, 17, 68, 0.7793242296918768) 58%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(12, 17, 68, 0.7793242296918768) 58%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(12, 17, 68, 0.7793242296918768) 58%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c1144",endColorstr="#000000",GradientType=1);
+  .title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+  }
 
-  
-      .image {
-        width: 100px;
-        height: 50px;
-      }
-    }
-    @media screen and (max-width: 768px){
-        .clients{
-            margin-top:-200px;
-        }
+  .mainDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 90px;
+
+    .image {
+      width: 100px;
+      height: 50px;
     }
   }
-  
+  @media screen and (max-width: 768px) {
+    .clients {
+      margin-top: -200px;
+    }
+  }
+}

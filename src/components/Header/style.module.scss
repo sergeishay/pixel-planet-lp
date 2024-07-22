@@ -4,7 +4,7 @@
     z-index: 25;
     top: 0;
     color: white;
-    padding: 35px;
+    padding: 3vw 6vw;
     justify-content: space-between;
     width: 100%;
     font-weight: 300;
@@ -56,22 +56,48 @@
     } 
 }
 
-.headerContact{
-    padding:10px 20px;
-    border:1px solid white;
+.headerContact {
+    padding: 15px 29px;
     border-radius: 50px;
     color: white;
-    background:rgba(255,255,255,0.21);
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     z-index: 105;
-    transition: background 0.3s;
-    &:hover{
-        background:#9945FF;
-        border:1px solid #9945FF
+    position: relative;
+    background: rgba(255, 255, 255, 0.21);
+    overflow: hidden;
+    transition: background 0.3s, border-color 0.3s;
+    border: 0px solid transparent;
+  
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, #7D13FF, #2C52D1, #15BFFD);
+      z-index: -1;
+      border-radius: inherit;
+      padding: 2px; /* Adjust padding to control the border thickness */
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
     }
-}
+  
+    &:hover {
+      background: #9945FF;
+      &:before {
+        background: linear-gradient(45deg, #15BFFD, #2C52D1, #7D13FF);
+      }
+    }
+  }
+  
+  
+  
+  
 .headerButtonContainer{
     transform: scale(0);
     position: fixed;

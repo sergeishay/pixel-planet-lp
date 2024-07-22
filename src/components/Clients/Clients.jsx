@@ -4,7 +4,7 @@ import styles from "./Clients.module.scss";
 
 const clients = [
   {
-    image: "/images/ysbatim.png",
+    image: "/images/ysbatim2.png",
     title: 'ysbatim'
   },
   {
@@ -24,7 +24,7 @@ const clients = [
     title: 'cotton'
   },
   {
-    image: "/images/rahav3.png",
+    image: "/images/rahav4.png",
     title: 'rahav'
   },
 ];
@@ -32,7 +32,7 @@ const clients = [
 const Clients = () => {
   return (
     <div id="clients" className={styles.clients}>
-      <h2 className={styles.title}>לקוחות שלנו </h2>
+      <h2 className={styles.title}>הכוכבים שלנו</h2>
       <div className={styles.mainDiv}>
         {clients.map((client, index) => (
           <div key={index} className={styles.client}>
