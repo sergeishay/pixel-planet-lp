@@ -106,7 +106,18 @@
           width: 100%;
           height: auto;
         }
+        .projectTitle,
+        .description,
+        .divider,
+        .buttonContainer{
+          padding-right: 15px;
+        }
+        .divider{
+          margin-right: 15px;
+
+        }
       }
+
     }
   }
 }

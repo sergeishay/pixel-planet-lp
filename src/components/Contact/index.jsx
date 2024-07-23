@@ -1,5 +1,4 @@
 import styles from "./style.module.scss";
-import Rounded from "../../common/RoundedButton";
 import { useRef } from "react";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 import Magnetic from "../../common/Magnetic";
@@ -21,6 +20,13 @@ export default function Contact() {
       <div className={styles.body}>
         <div className={styles.topSection}>
           <div className={styles.rightSection}>
+          <Image
+          src='/images/stars.png'
+          width={123.25}
+          height={123.25}
+          alt="stars"
+          className={styles.stars}
+           />
             <p className={styles.bigTitle}>
               דברו
               <br /> איתנו

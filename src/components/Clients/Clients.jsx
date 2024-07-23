@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./Clients.module.scss";
-import { motion } from "framer-motion";
 
 const clients = [
   {
@@ -29,38 +28,43 @@ const clients = [
     title: "rahav",
   },
 ];
-const container = {
-  hidden: { opacity: 0, y: 100 },
-  show: {
-    y: 0,
-    opacity: 1,
-    duration: 1.1,
-    transition: {
-      staggerChildren: 0.4,
-    },
-  },
-};
 
-const item = {
-  hidden: { opacity: 0, y: 100 },
-  show: {
-    opacity: 1,
-    y: 0,
-  },
-};
 const Clients = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const elements = containerRef.current.querySelectorAll(
+              `.${styles.client}`
+            );
+            elements.forEach((el, index) => {
+              setTimeout(() => {
+                el.classList.add(styles.fadeIn);
+              }, index * 300); // Delay each item by 300ms
+            });
+            observer.unobserve(entry.target); // Stop observing after the initial trigger
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(containerRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div id="clients" className={styles.clients}>
       <h2 className={styles.title}>הכוכבים שלנו</h2>
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0 }}
-        className={styles.mainDiv}
-      >
+      <div ref={containerRef} className={styles.mainDiv}>
         {clients.map((client, index) => (
-          <motion.div variants={item} key={index} className={styles.client}>
+          <div key={index} className={styles.client}>
             <Image
               src={client.image}
               alt={client.title}
@@ -70,9 +74,9 @@ const Clients = () => {
               className={styles.image}
               style={{ objectFit: "contain" }}
             />
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
