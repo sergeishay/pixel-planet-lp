@@ -15,8 +15,15 @@
   gap: 0px;
   font-size: 40px;
   font-weight: 600;
+  br{
+    display: none;
+  }
   @media screen and (max-width: 450px) {
     padding: 50px 20px 80px 20px;
+    font-size: 30px;
+    br{
+      display: block;
+    }
   }
   .body {
     display: flex;
@@ -34,9 +41,9 @@
     }
     .button {
       position: relative;
-      width: 160px;
+      width: 180px;
       height: 50px;
-      font-weight: bold;
+      
       background-color: #1c1d20;
       color: white;
       border-radius: 60px;
@@ -50,12 +57,12 @@
 
       @media screen and (max-width: 450px) {
         width: 180px;
-        height: 80px;
+        height: 50px;
       }
       p {
         margin: 0px;
         font-size: 16px;
-        font-weight: bold;
+        font-weight: 600 !important;
         position: relative;
         z-index: 1;
       }
