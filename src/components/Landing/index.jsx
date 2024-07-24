@@ -27,7 +27,7 @@ export default function Home() {
       </div>
       <div className={styles.mobileImage}>
         <Image
-          src="/images/mobile-hero.jpg"
+          src="/images/mobile-hero4.jpg"
           fill={true}
           alt="background for mobile"
           quality={100}

@@ -17,6 +17,8 @@
       object-fit: cover;
       object-position: top center;
       mix-blend-mode: screen;
+      transform: translateY(-18%); 
+
     }
   }
   br{
@@ -89,7 +91,7 @@
     }
 
     @media (max-width: 768px) {
-      top: 48%;
+      top: 63vh;
     }
   }
 
@@ -102,7 +104,7 @@
 
     @media screen and (max-width: 768px) {
       font-size: 40px;
-      margin-top: 25vh;
+      margin-top: 35vh;
     }
 
     p {
@@ -113,7 +115,7 @@
   .description {
     color: white;
     font-size: 24px;
-    text-shadow: 1px 1px 2px black;
+    // text-shadow: 1px 1px 2px black;
     font-weight: 300;
 
     p {

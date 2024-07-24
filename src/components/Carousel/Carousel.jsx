@@ -113,7 +113,13 @@ const Carousel = () => {
             <motion.p variants={item} className={styles.description}>
               {project.description}
             </motion.p>
+            <motion.p variants={item} className={styles.serviceTitle}>
+              שירות
+            </motion.p>
             <motion.div variants={item} className={styles.divider}></motion.div>
+            <motion.p variants={item} className={styles.service}>
+              {project.service}
+            </motion.p>
             <motion.div variants={item} className={styles.buttonContainer}>
               <Link
                 href={project.liveLink}

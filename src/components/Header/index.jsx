@@ -58,7 +58,7 @@ export default function Header() {
     <>
       <div ref={header} className={styles.header}>
         <div className={styles.logo}>
-          <Image src="/images/logo.svg" width={250} height={50} alt="logo" />
+          <Image src="/images/logo.svg" width={320} height={50} alt="logo" />
         </div>
         <div className={styles.nav}>
           <button className={styles.headerContact} onClick={scrollToContact}>

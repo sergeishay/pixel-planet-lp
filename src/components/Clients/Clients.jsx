@@ -4,7 +4,7 @@ import styles from "./Clients.module.scss";
 
 const clients = [
   {
-    image: "/images/ysbatim2.png",
+    image: "/images/ysbatim.png",
     title: "ysbatim",
   },
   {

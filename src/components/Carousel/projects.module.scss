@@ -48,10 +48,16 @@
       padding: 0 20px;
 
       .projectTitle {
-        font-size: 1.5em;
+        font-size: 3.5em;
         margin-bottom: 10px;
       }
-
+      .serviceTitle{
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .service{
+        margin-top: 5px;
+      }
       .description {
         font-size: 1em;
         margin-bottom: 20px;
@@ -61,7 +67,7 @@
       .divider {
         height: 4px;
         background: linear-gradient(45deg, #7d13ff, #2c52d1, #15bffd);
-        margin-bottom: 20px;
+        // margin-top: -5px;
         width: 50%;
       }
 
@@ -88,7 +94,7 @@
 @media screen and (max-width: 768px) {
   .projectsContainer {
     padding: 0 5vw;
-
+    
     .project {
       flex-direction: column;
       text-align: center;
@@ -99,19 +105,26 @@
       .description{
         text-align: start;
       }
+      
       .imageContainer,
       .contentContainer {
         flex: unset;
         width: 100%;
         padding: 0;
-
+        
         .projectImage {
           width: 100%;
           height: auto;
         }
-        .projectTitle,
+        .projectTitle {
+          font-size: 40px;
+          padding-right: 15px;
+
+        }
         .description,
         .divider,
+        .service,
+        .serviceTitle,
         .buttonContainer{
           padding-right: 15px;
         }
@@ -123,4 +136,5 @@
 
     }
   }
+
 }
