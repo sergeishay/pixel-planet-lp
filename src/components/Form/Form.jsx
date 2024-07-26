@@ -18,8 +18,6 @@ const Form = ({ isFooter }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setIsPopupOpen(true);
-
     setFormData({
       ...formData,
       [name]: value,
