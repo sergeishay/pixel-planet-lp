@@ -4,7 +4,7 @@ import styles from "./Clients.module.scss";
 
 const clients = [
   {
-    image: "/images/ysbatim.png",
+    image: "/images/ysbatim3.png",
     title: "ysbatim",
   },
   {
@@ -68,7 +68,6 @@ const Clients = () => {
             <Image
               src={client.image}
               alt={client.title}
-              layout="responsive"
               width={100}
               height={50}
               className={styles.image}

@@ -7,7 +7,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 const projects = [
   {
-    title: "hs-law",
+    title: "HS-LAW",
     description:
       "עיצוב ופיתוח אתר תדמית מרשים עבור משרד עורכי דין המתמחה בדיני עבודה ודיני חברות. האתר משדר אמינות ומקצועיות, ומאפשר ללקוחות פוטנציאליים לקבל את כל המידע הנחוץ להם בצורה נוחה וברורה.",
     service: "עיצוב ופיתוח אתר תדמית",
@@ -15,7 +15,7 @@ const projects = [
     image: "/images/haison-carusel.webp",
   },
   {
-    title: "cotton-club",
+    title: "COTTON CLUB",
     description:
       "עיצוב ופיתוח דף נחיתה עבור COTTON CLUB, חלל אורבני ואלגנטי מבית 'הנסיך'. המקום נולד מתוך הרצון לייצר מקום עכשווי לאירועים, תכנים, תרבות, בילויים ואוכל. האתר מציג את כל המידע הדרוש לאירועים מיוחדים בצורה אטרקטיבית ומזמינה.",
     service: "עיצוב ופיתוח דף נחיתה",
@@ -23,7 +23,7 @@ const projects = [
     image: "/images/cotton-carusel.webp",
   },
   {
-    title: "hoobank",
+    title: "HOOBANK",
     description:
       "עיצוב ופיתוח דף נחיתה מודרני ואינטואיטיבי לבנק Hoobank, המספק שירותים פיננסיים מתקדמים ללקוחותיו. האתר מציג את השירותים השונים של הבנק בצורה ברורה ונוחה לשימוש, ומשדר חדשנות וביטחון.",
     service: "עיצוב ופיתוח דף נחיתה",
@@ -107,7 +107,7 @@ const Carousel = () => {
             viewport={{ once: true, amount: 0 }}
             className={styles.contentContainer}
           >
-            <motion.h3 variants={item} className={styles.projectTitle}>
+            <motion.h3 variants={item} className={`${styles.projectTitle}`}>
               {project.title}
             </motion.h3>
             <motion.p variants={item} className={styles.description}>

@@ -97,7 +97,6 @@ export default function SlideImages() {
             );
           })}
         </motion.div>
-
       </div>
     </div>
   );

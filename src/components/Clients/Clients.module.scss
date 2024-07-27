@@ -19,6 +19,8 @@
     font-weight: 600;
     margin-bottom: 20px;
     color: white;
+    text-shadow: 1px 3px 11px rgba(0,0,0,0.5);
+
   }
 
   .mainDiv {
@@ -32,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
+    width: 140px;
     height: 90px;
     opacity: 0;
     transform: translateY(100px);
@@ -44,8 +46,9 @@
     }
 
     .image {
-      width: 100px;
-      height: 50px;
+      width: 140px;
+      height: 40px;
+      object-fit: contain;
     }
   }
 

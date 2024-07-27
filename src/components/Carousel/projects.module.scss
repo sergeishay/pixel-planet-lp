@@ -1,4 +1,4 @@
-// styles/projects.module.scss
+/* styles/projects.module.scss */
 .projectsContainer {
   display: flex;
   flex-direction: column;
@@ -10,10 +10,12 @@
   margin: 0 auto;
   padding: 0 10px;
   overflow: hidden;
+
   .title {
-    font-size:40px;
+    font-size: 40px;
     margin-bottom: 40px;
-    @media screen and (max-width: 768px){
+    text-shadow: 1px 3px 11px rgba(0,0,0,0.5);
+    @media screen and (max-width: 768px) {
       font-size: 30px;
     }
   }
@@ -48,26 +50,30 @@
       padding: 0 20px;
 
       .projectTitle {
-        font-size: 3.5em;
-        margin-bottom: 10px;
+        font-size: 3em;
+        margin-bottom: 0px;
+        font-weight: 500;
+        font-family: var(--font-montserrat), sans-serif;
       }
-      .serviceTitle{
+
+      .serviceTitle {
         font-weight: bold;
         margin-bottom: 5px;
       }
-      .service{
+
+      .service {
         margin-top: 5px;
       }
+
       .description {
         font-size: 1em;
         margin-bottom: 20px;
-        padding:0 0 0 40px;
+        padding: 0 0 0 40px;
       }
 
       .divider {
         height: 4px;
         background: linear-gradient(45deg, #7d13ff, #2c52d1, #15bffd);
-        // margin-top: -5px;
         width: 50%;
       }
 
@@ -94,7 +100,7 @@
 @media screen and (max-width: 768px) {
   .projectsContainer {
     padding: 0 5vw;
-    
+
     .project {
       flex-direction: column;
       text-align: center;
@@ -102,39 +108,39 @@
       &.reverse {
         flex-direction: column;
       }
-      .description{
+
+      .description {
         text-align: start;
       }
-      
+
       .imageContainer,
       .contentContainer {
         flex: unset;
         width: 100%;
         padding: 0;
-        
+
         .projectImage {
           width: 100%;
           height: auto;
         }
+
         .projectTitle {
           font-size: 40px;
           padding-right: 15px;
-
         }
+
         .description,
         .divider,
         .service,
         .serviceTitle,
-        .buttonContainer{
+        .buttonContainer {
           padding-right: 15px;
         }
-        .divider{
-          margin-right: 15px;
 
+        .divider {
+          margin-right: 15px;
         }
       }
-
     }
   }
-
 }

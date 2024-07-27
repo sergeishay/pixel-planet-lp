@@ -1,13 +1,15 @@
 .services {
   text-align: center;
-  padding: 20px 20px;
+  // padding: 20px 20px;
   background-size: cover;
 
   .title {
     font-size: 40px;
-    margin-bottom: 40px;
+    margin-bottom:0px;
     color: white;
     direction: rtl;
+    text-shadow: 1px 3px 11px rgba(0,0,0,0.5);
+
     @media screen and (max-width: 768px){
       font-size: 30px;
     }
@@ -17,12 +19,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
 
   .card {
     position: relative;
     padding: 30px 20px;
-    margin: 10px;
+    margin: 20px;
     width: 300px;
     height: 400px; /* Adjust height as needed */
     color: white;
