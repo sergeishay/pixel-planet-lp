@@ -90,7 +90,7 @@ export default function Contact() {
             </Magnetic>
           </div>
           <Link href="/accessibility">
-            <p className={styles.smallTitlte}>הצהרת נגישות</p>
+            <p >הצהרת נגישות</p>
           </Link>
         </div>
       </div>
