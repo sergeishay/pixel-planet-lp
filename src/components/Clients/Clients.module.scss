@@ -20,7 +20,9 @@
     margin-bottom: 20px;
     color: white;
     text-shadow: 1px 3px 11px rgba(0,0,0,0.5);
-
+    @media screen and (max-width: 768px){
+      font-size: 30px;
+    }
   }
 
   .mainDiv {

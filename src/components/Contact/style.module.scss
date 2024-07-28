@@ -123,12 +123,18 @@
     .smallTitlte {
       font-size: 18px;
       font-weight: 300;
-      font-family: var(--font-montserrat), sans-serif;
+      // font-family: var(--font-montserrat), sans-serif;
       margin: 0;
       color: white;
       padding-bottom: 5px;
     }
+    .smallTitlteHeb{
+      font-size: 18px;
+      font-weight: 300;
+      padding-bottom: 5px;
+      margin: 0;
 
+    }
     .leftSection {
       display: flex;
       flex-direction: column;

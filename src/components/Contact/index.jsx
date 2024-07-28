@@ -42,7 +42,7 @@ export default function Contact() {
             <Link href="tel:0549093350">
               <p className={styles.smallTitlte}>0549093350</p>
             </Link>
-            <p className={styles.smallTitlte}>תל אביב, ישראל</p>
+            <p className={styles.smallTitlteHeb}>תל אביב, ישראל</p>
           </div>
           <div className={styles.leftSection}>
             <p>השאירו פרטים ונחזור אליכם בהקדם</p>
