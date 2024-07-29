@@ -39,7 +39,7 @@ export default function Home() {
           בונים אתרים שיזניקו 
             <br />
             {" "}
-            את העסק שלכם לחלל
+            את העסק שלכם לירח
           </p>
         </motion.div>
         <motion.div style={{ y: y2 }} className={styles.description}>

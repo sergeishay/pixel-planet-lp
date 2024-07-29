@@ -6,14 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 const projects = [
-  {
-    title: "HS-LAW",
-    description:
-      "עיצוב ופיתוח אתר תדמית מרשים עבור משרד עורכי דין המתמחה בדיני עבודה ודיני חברות. האתר משדר אמינות ומקצועיות, ומאפשר ללקוחות פוטנציאליים לקבל את כל המידע הנחוץ להם בצורה נוחה וברורה.",
-    service: "עיצוב ופיתוח אתר תדמית",
-    liveLink: "https://hs-law.co.il/",
-    image: "/images/haison-carusel.webp",
-  },
+
   {
     title: "COTTON CLUB",
     description:
@@ -25,10 +18,17 @@ const projects = [
   {
     title: "HOOBANK",
     description:
-      "עיצוב ופיתוח דף נחיתה מודרני ואינטואיטיבי לבנק Hoobank, המספק שירותים פיננסיים מתקדמים ללקוחותיו. האתר מציג את השירותים השונים של הבנק בצורה ברורה ונוחה לשימוש, ומשדר חדשנות וביטחון.",
+      "עיצוב ופיתוח דף נחיתה מודרני ואינטואיטיבי לבנק Hoobank, המספק שירותים פיננסיים מתקדמים ללקוחותיו. האתר מציג את השירותים השונים של הבנק בצורה נגישה תוך כדי חווית משתמש נוחה ופשוטה.",
     service: "עיצוב ופיתוח דף נחיתה",
     liveLink: "https://bank-demo.sergei-lp.com/",
     image: "/images/bank-carusel.webp",
+  },  {
+    title: "HS-LAW",
+    description:
+      "עיצוב ופיתוח אתר תדמית לחיימסון סודאי. משרד עו״ד המוביל בישראל לענייני המגזר המושבי, החקלאי והמנהלי. פיתוח שפה עיצובית רחבה המבוססת על ערכים של מקצועיות, הישגיות וחדשנות.",
+    service: "עיצוב ופיתוח אתר תדמית",
+    liveLink: "https://hs-law.co.il/",
+    image: "/images/haison-carusel.webp",
   },
 ];
 
@@ -113,8 +113,8 @@ const Carousel = () => {
             <Image
               src={project.image}
               alt={project.title}
-              width={500}
-              height={500}
+              width={600}
+              height={600}
               className={`${styles.projectImage}`}
             />
           </motion.div>

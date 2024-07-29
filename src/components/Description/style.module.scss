@@ -39,6 +39,14 @@
       color: white;
       text-decoration: none;
     }
+    .textDescription{
+      font-size: 20px;
+      font-weight: 300;
+
+      .pTag{
+        font-weight: 600;
+      }
+    }
     .button {
       position: relative;
       width: 180px;
