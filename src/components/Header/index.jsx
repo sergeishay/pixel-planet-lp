@@ -62,7 +62,7 @@ export default function Header() {
         </div>
         <div className={styles.nav}>
           <button className={styles.headerContact} onClick={scrollToContact}>
-            קבל הצעת מחיר
+            קבלו הצעת מחיר
           </button>
 
         </div>

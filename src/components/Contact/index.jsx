@@ -57,7 +57,13 @@ export default function Contact() {
             width="300"
             height="100"
           />
-          <p className={styles.smallTitlte}>Your Vision, Our Space</p>
+          <Image
+            // className={styles.logoFooter}
+            src="/images/slogen.png"
+            alt="logo"
+            width="200"
+            height="20"
+          />
           <div className={styles.social}>
             <Magnetic>
               <div className={styles.el}>
@@ -90,7 +96,7 @@ export default function Contact() {
             </Magnetic>
           </div>
           <Link href="/accessibility">
-            <p >הצהרת נגישות</p>
+            <p>הצהרת נגישות</p>
           </Link>
         </div>
       </div>

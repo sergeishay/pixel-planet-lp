@@ -6,38 +6,38 @@ import Image from "next/image";
 const slider1 = [
   {
     color: "rgba(255, 255, 255, 0.25)",
-    src: "unicorn.png",
+    src: "sura-final.png",
   },
   {
     color: "rgba(255, 255, 255, 0.25)",
-    src: "sura.png",
+    src: "nova-final.png",
   },
   {
     color: "rgba(255, 255, 255, 0.25)",
-    src: "nova.png",
+    src: "unicorn-final.png",
   },
   {
     color: "rgba(255, 255, 255, 0.25)",
-    src: "manchila.png",
+    src: "manchilla-final.png",
   },
 ];
 
 const slider2 = [
   {
     color: "rgba(255, 255, 255, 0.25)",
-    src: "manchila.png",
+    src: "ysbatim-final.png",
   },
   {
     color: "rgba(255, 255, 255, 0.25)",
-    src: "haison2.png",
+    src: "bedroom-final.png",
   },
   {
     color: "rgba(255, 255, 255, 0.25)",
-    src: "game.png",
+    src: "game-final.png",
   },
   {
     color: "rgba(255, 255, 255, 0.25)",
-    src: "manchila.png",
+    src: "hello-final.png",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function SlideImages() {
 
   return (
     <div className={styles.sliderBody}>
-    <h2 className={styles.title}>עוד שותפים למסע בפלנטה</h2>
+      <h2 className={styles.title}>עוד שותפים למסע בפלנטה</h2>
       <div ref={container} className={styles.slidingImages}>
         <motion.div style={{ x: x1 }} className={styles.slider}>
           {slider1.map((project, index) => {
@@ -90,7 +90,6 @@ export default function SlideImages() {
                     alt={"image"}
                     src={`/images/${project.src}`}
                     quality={100}
-
                   />
                 </div>
               </div>

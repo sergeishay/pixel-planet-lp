@@ -9,19 +9,19 @@
   flex-direction: column;
   direction: rtl;
 
-  text-shadow: 1px 3px 11px rgba(0,0,0,0.5);
+  text-shadow: 1px 3px 11px rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white;
   gap: 0px;
   font-size: 40px;
   font-weight: 600;
-  br{
+  br {
     display: none;
   }
   @media screen and (max-width: 450px) {
     padding: 50px 20px 80px 20px;
     font-size: 30px;
-    br{
+    br {
       display: block;
     }
   }
@@ -35,23 +35,26 @@
     direction: rtl;
     justify-content: center;
     padding: 0 2vw;
-    a{
+    a {
       color: white;
       text-decoration: none;
     }
-    .textDescription{
+    .pTag {
+      font-size: 20px !important;
+      font-weight: 600;
+      padding: 0;
+      margin: 0;
+      line-height: 0px;
+    }
+    .textDescription {
       font-size: 20px;
       font-weight: 300;
-
-      .pTag{
-        font-weight: 600;
-      }
     }
     .button {
       position: relative;
       width: 180px;
       height: 50px;
-      
+
       background-color: #1c1d20;
       color: white;
       border-radius: 60px;
