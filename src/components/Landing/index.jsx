@@ -46,7 +46,7 @@ export default function Home() {
           <p> פיתוח ועיצוב אתרים, אפליקציות מותאמות  
           {" "}
           <br />
-          ומיתוג מקצועי - כל מה שצריך להצלחה דיגיטלי
+          ומיתוג מקצועי - כל מה שצריך להצלחה דיגיטלית
           </p>
         </motion.div>
         <div className={styles.buttonContainer}>
