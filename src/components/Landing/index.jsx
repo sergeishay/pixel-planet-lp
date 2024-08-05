@@ -43,10 +43,11 @@ export default function Home() {
           </p>
         </motion.div>
         <motion.div style={{ y: y2 }} className={styles.description}>
-          <p>פיתוח ועיצוב אתרים, אפלקציות 
+          <p> פיתוח ועיצוב אתרים, אפליקציות מותאמות  
           {" "}
           <br />
-           וכל מה שמעבר</p>
+          ומיתוג מקצועי - כל מה שצריך להצלחה דיגיטלי
+          </p>
         </motion.div>
         <div className={styles.buttonContainer}>
           <Link href="#contact">

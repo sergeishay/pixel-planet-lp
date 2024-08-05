@@ -21,9 +21,7 @@
 
     }
   }
-  br{
-    display: none;
-  }
+
   @media (min-width: 768px) {
     br{
       display: block;
@@ -56,7 +54,7 @@
 
     @media screen and (max-width: 768px) {
       justify-content: flex-start;
-      padding: 3vw;
+      padding:0 3vw;
     }
   }
 
@@ -99,14 +97,14 @@
 
   .mainTitle {
     color: white;
-    font-size: 5vw;
+    font-size: 4.5vw;
     font-weight: bold;
     text-shadow: 1px 3px 11px rgba(0,0,0,0.5);
     margin: 0;
 
     @media screen and (max-width: 768px) {
       font-size: 40px;
-      margin-top: 40vh;
+      margin-top: 35vh;
     }
 
     p {
@@ -124,12 +122,10 @@
       margin: 0px;
       margin-bottom: 10px;
       margin-right: 10px;
-      br {
-        display: none;
-      }
+
       @media screen and (max-width: 450px) {
         br {
-          display: block;
+          display: none;
         }
       }
     }
