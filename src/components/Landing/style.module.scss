@@ -102,11 +102,20 @@
     text-shadow: 1px 3px 11px rgba(0,0,0,0.5);
     margin: 0;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 400px) {
       font-size: 40px;
       margin-top: 35vh;
+      br{
+        display: none;
+      }
     }
-
+    @media screen and (min-width: 401px) and (max-width:765px) {
+      font-size: 40px;
+      margin-top: 32vh;
+      br{
+        display: none;
+      }
+    }
     p {
       margin: 10px;
     }
