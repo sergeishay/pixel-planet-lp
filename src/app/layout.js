@@ -70,7 +70,6 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content={metadata.twitter.images[0].url} />
       </Head>
       <GoogleTagManager gtmId="GTM-NCZK936H" />
-      <GoogleAnalytics gaId="G-PLFSRYJKBL" />
       <body className={`${rubik.className} ${montserrat.variable}`}>
         <Header />
         {children}
