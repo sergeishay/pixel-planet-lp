@@ -4,7 +4,7 @@ import { Rubik } from 'next/font/google';
 import Header from '../components/Header';
 import Head from 'next/head';
 import Script from 'next/script';
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager,GoogleAnalytics  } from '@next/third-parties/google'
 const rubik = Rubik({ subsets: ['latin'] });
 const montserrat = Montserrat_Alternates({
   subsets: ['latin'],
@@ -70,6 +70,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content={metadata.twitter.images[0].url} />
       </Head>
       <GoogleTagManager gtmId="GTM-NCZK936H" />
+      <GoogleAnalytics gaId="G-PLFSRYJKBL" />
       <body className={`${rubik.className} ${montserrat.variable}`}>
         <Header />
         {children}
