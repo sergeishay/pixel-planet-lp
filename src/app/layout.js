@@ -1,4 +1,5 @@
 import './globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Montserrat_Alternates } from 'next/font/google';
 import { Rubik } from 'next/font/google';
 import Header from '../components/Header';
@@ -72,19 +73,8 @@ export default function RootLayout({ children }) {
       <body className={`${rubik.className} ${montserrat.variable}`}>
         <Header />
         {children}
-        {/* Google Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-PLFSRYJKBL`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PLFSRYJKBL');
-          `}
-        </Script>
+
+
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
@@ -102,6 +92,7 @@ export default function RootLayout({ children }) {
             height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe>
         </noscript>
       </body>
+      <GoogleAnalytics gaId="G-PLFSRYJKBL" />
     </html>
   );
 }
