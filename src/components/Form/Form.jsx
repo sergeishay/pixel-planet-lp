@@ -1,4 +1,3 @@
-// components/Form.js
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./Form.module.scss";
@@ -38,6 +37,15 @@ const Form = ({ isFooter }) => {
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
+
+            // Push event to dataLayer
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                event: 'lead_created',
+                message: 'Lead created successfully'
+              });
+            }
+
             setIsPopupOpen(true);
           },
           (error) => {
