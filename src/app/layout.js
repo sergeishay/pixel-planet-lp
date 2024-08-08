@@ -72,6 +72,20 @@ export default function RootLayout({ children }) {
       <body className={`${rubik.className} ${montserrat.variable}`}>
         <Header />
         {children}
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-PLFSRYJKBL`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PLFSRYJKBL');
+          `}
+        </Script>
+        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
