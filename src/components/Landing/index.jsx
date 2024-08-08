@@ -36,23 +36,21 @@ export default function Home() {
       <div className={styles.mainContainer}>
         <motion.div style={{ y: y1 }} className={styles.mainTitle}>
           <p>
-          בונים אתרים שיזניקו 
-            <br />
-            {" "}
-            את העסק שלכם לירח
+            בונים אתרים שיזניקו
+            <br /> את העסק שלכם לירח
           </p>
         </motion.div>
         <motion.div style={{ y: y2 }} className={styles.description}>
-          <p> פיתוח ועיצוב אתרים, אפליקציות מותאמות  
-          {" "}
-          <br />
-          ומיתוג מקצועי - כל מה שצריך להצלחה דיגיטלית
+          <p>
+            {" "}
+            פיתוח ועיצוב אתרים ואפליקציות, <br />
+            ומיתוג מקצועי - כל מה שהעסק שלך צריך כדי להמריא להצלחה דיגיטלית!
           </p>
         </motion.div>
         <div className={styles.buttonContainer}>
           <Link href="#contact">
             <Rounded className={styles.moreButton}>
-              <p>דברו איתנו</p>
+              <p>שגרו אלינו </p>
             </Rounded>
           </Link>
         </div>

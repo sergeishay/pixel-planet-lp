@@ -111,7 +111,7 @@ const Form = ({ isFooter }) => {
           type="submit"
           className={isFooter ? styles.button2 : styles.button}
         >
-        בואו נדבר
+        שגרו אלינו
         </button>
       </form>
       <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />

@@ -45,7 +45,7 @@ export default function Contact() {
             <p className={styles.smallTitlteHeb}>תל אביב, ישראל</p>
           </div>
           <div className={styles.leftSection}>
-            <p>השאירו פרטים ונחזור אליכם בהקדם</p>
+            <p>זה לא מדע טילים, תשאירו פרטים ומיד נחזור אליכם.</p>
             <Form isFooter={true} />
           </div>
         </div>

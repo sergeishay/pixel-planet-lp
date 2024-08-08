@@ -1,14 +1,4 @@
-@keyframes lavaLamp {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+
   
   .whatsappButton {
     position: fixed;
@@ -17,7 +7,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #ecdcff, #c2cef3, #88dfff);
+    background: white;
     background-size: 200% 200%;
     display: flex;
     justify-content: center;
@@ -26,7 +16,7 @@
     z-index: 100;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    animation: lavaLamp 4s ease infinite;
+    animation: lavaLamp 1s ease infinite;
   
     &:hover {
       transform: scale(1.1);
