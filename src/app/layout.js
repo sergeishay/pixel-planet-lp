@@ -1,11 +1,10 @@
 import './globals.css';
-import { GoogleAnalytics } from '@next/third-parties/google'
 import { Montserrat_Alternates } from 'next/font/google';
 import { Rubik } from 'next/font/google';
 import Header from '../components/Header';
 import Head from 'next/head';
 import Script from 'next/script';
-
+import { GoogleTagManager } from '@next/third-parties/google'
 const rubik = Rubik({ subsets: ['latin'] });
 const montserrat = Montserrat_Alternates({
   subsets: ['latin'],
@@ -70,13 +69,11 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.images[0].url} />
       </Head>
+      <GoogleTagManager gtmId="GTM-NCZK936H" />
       <body className={`${rubik.className} ${montserrat.variable}`}>
         <Header />
         {children}
-
-
-        {/* Google Tag Manager */}
-        <Script
+        {/* <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -86,13 +83,12 @@ export default function RootLayout({ children }) {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-NCZK936H');`
           }}
-        />
-        <noscript>
+        /> */}
+        {/* <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCZK936H"
             height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe>
-        </noscript>
+        </noscript> */}
       </body>
-      <GoogleAnalytics gaId="G-PLFSRYJKBL" />
     </html>
   );
 }

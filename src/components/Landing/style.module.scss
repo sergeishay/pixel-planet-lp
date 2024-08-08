@@ -88,10 +88,14 @@
       z-index: 1;
     }
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 400px)  {
       top: 76vh;
       width: 140px;
       height: 46px;
+    }
+    @media screen and (min-width: 401px) and (max-width:765px) {
+      top: 66vh;
+
     }
   }
 
