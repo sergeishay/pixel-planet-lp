@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./Form.module.scss";
 import { validateForm } from "../../helpers/formValidation";
@@ -10,10 +10,35 @@ const Form = ({ isFooter }) => {
     phone: "",
     email: "",
     service: isFooter ? "web development" : "", // Default value for the select field
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
   });
 
   const [errors, setErrors] = useState({});
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  useEffect(() => {
+    // Extract UTM parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const utm_source = urlParams.get('utm_source') || '';
+    const utm_medium = urlParams.get('utm_medium') || '';
+    const utm_campaign = urlParams.get('utm_campaign') || '';
+    const utm_term = urlParams.get('utm_term') || '';
+    const utm_content = urlParams.get('utm_content') || '';
+
+    // Update formData with UTM parameters
+    setFormData(prevData => ({
+      ...prevData,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_term,
+      utm_content
+    }));
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -119,7 +144,7 @@ const Form = ({ isFooter }) => {
           type="submit"
           className={isFooter ? styles.button2 : styles.button}
         >
-        שגרו אלינו
+          שגרו אלינו
         </button>
       </form>
       <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />

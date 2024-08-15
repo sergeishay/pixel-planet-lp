@@ -21,8 +21,8 @@ const Popup = ({ isOpen, onClose }) => {
         <button className={styles.closeButton} onClick={onClose}>X</button>
         <h2>הטופס נשלח בהצלחה!</h2>
         <p>ניצור איתך קשר בהקדם האפשרי.</p>
-        <p>בקר באתר המלא שלנו</p>
-        <button className={styles.visitButton} onClick={() => window.location.href = "https://www.planet-pixel.co.il/"}>לכו לאתר</button>
+        <p>רוצים לדבר כבר עכשיו?</p>
+        <button className={styles.visitButton} onClick={() => window.location.href = "https://wa.me/+972549093350"}>בואו לwhatsapp!</button>
       </motion.div>
     </motion.div>
   );
