@@ -15,6 +15,17 @@ const Form = ({ isFooter }) => {
     utm_campaign: "",
     utm_term: "",
     utm_content: "",
+    utm_ad: "",
+    matchtype: "",
+    device: "",
+    GeoLoc: "",
+    placement: "",
+    network: "",
+    campaign_id: "",
+    adset_id: "",
+    ad_id: "",
+    gad_source: "",
+    gclid: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -28,6 +39,17 @@ const Form = ({ isFooter }) => {
     const utm_campaign = urlParams.get('utm_campaign') || '';
     const utm_term = urlParams.get('utm_term') || '';
     const utm_content = urlParams.get('utm_content') || '';
+    const utm_ad = urlParams.get('utm_ad') || '';
+    const matchtype = urlParams.get('matchtype') || '';
+    const device = urlParams.get('device') || '';
+    const GeoLoc = urlParams.get('GeoLoc') || '';
+    const placement = urlParams.get('placement') || '';
+    const network = urlParams.get('network') || '';
+    const campaign_id = urlParams.get('campaign_id') || '';
+    const adset_id = urlParams.get('adset_id') || '';
+    const ad_id = urlParams.get('ad_id') || '';
+    const gad_source = urlParams.get('gad_source') || '';
+    const gclid = urlParams.get('gclid') || '';
 
     // Update formData with UTM parameters
     setFormData(prevData => ({
@@ -36,7 +58,19 @@ const Form = ({ isFooter }) => {
       utm_medium,
       utm_campaign,
       utm_term,
-      utm_content
+      utm_content,
+      utm_ad,
+      matchtype,
+      device,
+      GeoLoc,
+      placement,
+      network,
+      campaign_id,
+      adset_id,
+      ad_id,
+      gad_source,
+      gclid,
+      
     }));
   }, []);
 
