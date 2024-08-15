@@ -62,7 +62,7 @@ const Form = ({ isFooter }) => {
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
-
+  
             // Push event to dataLayer
             if (window.dataLayer) {
               window.dataLayer.push({
@@ -70,7 +70,23 @@ const Form = ({ isFooter }) => {
                 message: 'Lead created successfully'
               });
             }
-
+  
+            // Send data to webhook
+            fetch('https://hook.eu1.make.com/2wpe7rf7u7atk49aagw9tyqwjr4g85s9', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Webhook success:', data);
+            })
+            .catch((error) => {
+              console.error('Webhook error:', error);
+            });
+  
             setIsPopupOpen(true);
           },
           (error) => {
@@ -81,6 +97,7 @@ const Form = ({ isFooter }) => {
       setErrors(validationErrors);
     }
   };
+  
 
   return (
     <>
