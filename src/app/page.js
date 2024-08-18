@@ -8,7 +8,6 @@ import Description from '../components/Description';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import Services from '../components/Services/Services';
-import MainProjects from '../components/MainProjects/MainProjects';
 import Carousel from '../components/Carousel/Carousel'
 import Clients from '../components/Clients/Clients';
 import Whatsapp from '../components/Whatsapp/Whatsapp';

@@ -1,12 +1,12 @@
 import './globals.css';
-import { Montserrat_Alternates } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { Rubik } from 'next/font/google';
 import Header from '../components/Header';
 import Head from 'next/head';
 import Script from 'next/script';
 import { GoogleTagManager,GoogleAnalytics  } from '@next/third-parties/google'
 const rubik = Rubik({ subsets: ['latin'] });
-const montserrat = Montserrat_Alternates({
+const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],

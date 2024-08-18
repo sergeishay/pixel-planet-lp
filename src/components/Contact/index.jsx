@@ -40,12 +40,12 @@ export default function Contact() {
               <p className={styles.smallTitlte}>info@pixel-planet.co.il</p>
             </Link>
             <Link href="tel:0549093350">
-              <p className={styles.smallTitlte}>0549093350</p>
+              <p className={styles.smallTitlte}>054-9093350</p>
             </Link>
             <p className={styles.smallTitlteHeb}>תל אביב, ישראל</p>
           </div>
           <div className={styles.leftSection}>
-            <p>זה לא מדע טילים, תשאירו פרטים ומיד נחזור אליכם.</p>
+            <p>זה לא מדע טילים, תשאירו פרטים ונחזור אליכם בהקדם.</p>
             <Form isFooter={true} />
           </div>
         </div>
