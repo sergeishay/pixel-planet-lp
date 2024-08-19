@@ -43,14 +43,19 @@ export default function Home() {
         <motion.div style={{ y: y2 }} className={styles.description}>
           <p>
             {" "}
-            פיתוח ועיצוב אתרים, אפליקציות, מיתוג וסושיאל מדיה -  <br />
+            פיתוח ועיצוב אתרים, אפליקציות, מיתוג וסושיאל מדיה - <br />
             כל מה שהעסק שלך צריך כדי להמריא להצלחה דיגיטלית!
           </p>
         </motion.div>
         <div className={styles.buttonContainer}>
           <Link href="#contact">
             <Rounded className={styles.moreButton}>
-              <p>שגרו אלינו </p>
+              <p
+                className={styles.pTagButton}
+                style={{ textDecoration: "none" }}
+              >
+                שגרו אלינו
+              </p>
             </Rounded>
           </Link>
         </div>
