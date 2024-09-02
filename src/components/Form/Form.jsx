@@ -9,7 +9,7 @@ const Form = ({ isFooter }) => {
     name: "",
     phone: "",
     email: "",
-    service: isFooter ? "web development" : "", // Default value for the select field
+    service: isFooter ? "פיתוח ועיצוב אתר תדמית" : "", 
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
@@ -95,7 +95,7 @@ const Form = ({ isFooter }) => {
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
-
+  
             // Push event to dataLayer
             if (window.dataLayer) {
               window.dataLayer.push({
@@ -103,7 +103,7 @@ const Form = ({ isFooter }) => {
                 message: "Lead created successfully",
               });
             }
-
+  
             // Send data to webhook
             fetch(
               "https://hook.eu1.make.com/2wpe7rf7u7atk49aagw9tyqwjr4g85s9",
@@ -122,8 +122,33 @@ const Form = ({ isFooter }) => {
               .catch((error) => {
                 console.error("Webhook error:", error);
               });
-
+  
+            // Show the popup
             setIsPopupOpen(true);
+  
+            // Reset form data to clear all fields
+            setFormData({
+              name: "",
+              phone: "",
+              email: "",
+              service: isFooter ? "web development" : "", // Default value for the select field
+              utm_source: "",
+              utm_medium: "",
+              utm_campaign: "",
+              utm_term: "",
+              utm_content: "",
+              utm_ad: "",
+              matchtype: "",
+              device: "",
+              GeoLoc: "",
+              placement: "",
+              network: "",
+              campaign_id: "",
+              adset_id: "",
+              ad_id: "",
+              gad_source: "",
+              gclid: "",
+            });
           },
           (error) => {
             console.log("FAILED...", error);
@@ -133,6 +158,7 @@ const Form = ({ isFooter }) => {
       setErrors(validationErrors);
     }
   };
+  
 
   return (
     <>
@@ -182,9 +208,9 @@ const Form = ({ isFooter }) => {
               onChange={handleChange}
               className={styles.select}
             >
-              <option value="web development"> עיצוב ופיתוח אתרים</option>
-              <option value="design">עיצוב ויפיתוח דף נחיתה</option>
-              <option value="marketing">מיתוג וסושיאל</option>
+              <option value="פיתוח ועיצוב אתר תדמית"> עיצוב ופיתוח אתרים</option>
+              <option value="פיתוח ועיצוב דף נחיתה">עיצוב ופיתוח דף נחיתה</option>
+              <option value="מיתוג וסושיאל">מיתוג וסושיאל</option>
             </select>
             {errors.service && (
               <span className={styles.error}>{errors.service}</span>
