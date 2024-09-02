@@ -36,7 +36,9 @@ export default function Home() {
       <div className={styles.mainContainer}>
         <motion.div style={{ y: y1 }} className={styles.mainTitle}>
           <p>
-            בונים אתרים שיזניקו
+            {""}בונים אתרים {""}
+            <br className={styles.mobil} />
+            שיזניקו  
             <br /> את העסק שלכם לירח
           </p>
         </motion.div>

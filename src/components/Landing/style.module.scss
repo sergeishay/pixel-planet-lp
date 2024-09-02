@@ -7,6 +7,12 @@
   @media screen and (min-width: 1568px) {
     height: 100vh;
   }
+
+  @media (min-width: 400px) and (max-width:450px) {
+    height: 140vh;
+
+  }
+
   .desktopImage {
     display: none;
   }
@@ -17,7 +23,7 @@
       object-fit: cover;
       object-position: top center;
       mix-blend-mode: screen;
-      transform: translateY(-15%);
+      transform: translateY(-17%);
     }
   }
 
@@ -50,10 +56,15 @@
     gap: 0;
     align-items: flex-start;
     z-index: 10;
-
+    .mobil{
+      display: none;
+    }
     @media screen and (max-width: 450px) {
       justify-content: flex-start;
       padding: 0 3vw;
+      .mobil{
+        display: block;
+      }
     }
   }
 
