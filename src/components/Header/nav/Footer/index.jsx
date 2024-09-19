@@ -36,7 +36,22 @@ export default function index() {
         <div className={styles.indicator}></div>
       </div>
     </Magnetic>
-
+    <Magnetic>
+      <div className={styles.el}>
+        <Link
+         href="https://www.facebook.com/profile.php?id=61564515264992"
+         target="_blank"
+         >
+          <Image
+            src="/images/facebook.svg"
+            width={20}
+            height={20}
+            alt="logo"
+          />
+        </Link>
+        <div className={styles.indicator}></div>
+      </div>
+    </Magnetic>
   </div>
   )
 }
