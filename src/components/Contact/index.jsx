@@ -111,9 +111,14 @@ export default function Contact() {
               </div>
             </Magnetic>
           </div>
-          <Link href="/accessibility">
-            <p>הצהרת נגישות</p>
-          </Link>
+          <div className={styles.privecy}>
+            <Link href="/accessibility">
+              <p>הצהרת נגישות</p>
+            </Link>
+            <Link href="/privacy-policy">
+              <p>מדיניות פרטיות</p>
+            </Link>
+          </div>
         </div>
       </div>
     </motion.div>
