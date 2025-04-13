@@ -265,6 +265,7 @@
       .buttonContainer {
         margin-top: auto;
         padding-top: 20px;
+        margin-bottom: 20px;
       } // Push button to bottom
       .liveSite {
         text-decoration: none;
@@ -311,6 +312,7 @@
         flex: unset;
         width: 100%;
         padding: 0;
+        margin-bottom: 20px;
         max-width: 100%;
         order: unset !important; // Reset order
       }
