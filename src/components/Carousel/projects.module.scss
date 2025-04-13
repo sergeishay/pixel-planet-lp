@@ -1,147 +1,340 @@
-/* styles/projects.module.scss */
+// projects.module.scss
+
 .projectsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   color: white;
   direction: rtl;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
-  overflow: hidden;
+  max-width: 100%;
 
+  padding: 0 5vw;
+  // overflow: hidden; // CRITICAL: Ensure this is removed or commented out for sticky positioning to work
+
+  // ... (Keep .title and .tabContainer styles as they were - or use the refined ones from previous attempt if you liked them)
   .title {
     font-size: 40px;
     margin-bottom: 40px;
-    text-shadow: 1px 3px 11px rgba(0,0,0,0.5);
+    text-shadow: 1px 3px 11px rgba(0, 0, 0, 0.5);
     @media screen and (max-width: 768px) {
       font-size: 30px;
     }
+  }
+
+  .tabContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    // gap: 10px;
+
+    .tabButton {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 26px;
+      margin: 0;
+      padding: 10px 30px;
+      cursor: pointer;
+      border-bottom: 3px solid #b8b8b8;
+      transition: all 0.3s ease;
+      font-family: var(--font-rubik), sans-serif;
+      font-weight: 300;
+
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+        padding: 8px 12px;
+      }
+
+      &:hover {
+        color: #00b7ff;
+        border-bottom-color: rgba(0, 183, 255, 0.5);
+      }
+    }
+
+    .activeTab {
+      font-weight: 500;
+      border-bottom-width: 3px;
+      border-image: linear-gradient(to right, #7d13ff, #15bffd) 1;
+      color: #fff;
+    }
+  }
+
+  .projectsList {
+    // Wrapper for the list of projects
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8vh; // Consistent gap between all project types
   }
 
   .project {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 60px;
     width: 100%;
+    gap: 0; // Gap between image and content
+
+    // Default: Image Left (order 1), Content Right (order 2) in RTL
+    .imageContainer {
+      order: 1;
+      flex: 0 0 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contentContainer {
+      order: 2;
+      flex: 1;
+    } // Content takes remaining space
 
     &.reverse {
-      flex-direction: row-reverse;
+      // Reversed: Image Right (order 2), Content Left (order 1) in RTL
+      .imageContainer {
+        order: 2;
+      }
+      .contentContainer {
+        order: 1;
+      }
     }
 
     .imageContainer {
-      flex: 1 1 60%;
-      display: flex;
-      justify-content: center;
-
+      perspective: 1000px; // Optional for 3D effects in variants
       .projectImage {
-        object-fit: cover;
-        border: none;
+        object-fit: contain;
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        max-height: 70vh;
+        border-radius: 8px;
       }
     }
 
     .contentContainer {
-      flex: 1 1 40%;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding: 0 20px;
+      align-items: flex-start; // Align content items to the start (right in RTL)
+      padding: 0 20px; // Add padding around content
 
+      // --- Sub-elements styling (Title, Desc, Divider, Button) ---
+      // Use the refined styles from the previous attempt if you liked them
       .projectTitle {
-        font-size: 3em;
-        margin-bottom: 0px;
+        font-size: 2.8em;
+        margin-bottom: 10px;
         font-weight: 500;
         font-family: var(--font-montserrat), sans-serif;
       }
+      .description {
+        font-size:1.2vw;
+        font-weight: 300;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
+      .serviceTitle {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 1.1vw;
+        text-transform: uppercase;
+      }
+      .divider {
+        height: 2px;
+        background: linear-gradient(90deg, #7d13ff, #2c52d1, #15bffd);
+        width: 50%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+      .service {
+        margin-bottom: 15px;
+        font-size: 1.3em;
+      }
+      .buttonContainer {
+        margin-top: 25px;
+      }
+      .liveSite {
+        text-decoration: none;
+        color: white;
+        padding: 12px 35px;
+        border: solid 2px #00b7ff;
+        border-radius: 30px;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+        font-weight: 500;
+        &:hover {
+          background-color: #00b7ff;
+          color: white;
+        }
+      }
+      // --- End Sub-elements ---
+    }
+  } // --- End .project (Landing/Corporate specific) ---
 
+  // --- Styles specifically for BRANDING projects ---
+  .brandingProjectContainer {
+    display: flex;
+    position: relative; // Needed for sticky children context
+    width: 100%;
+    direction: ltr;
+    gap: 5%; // Gap between image area and content area
+
+    // --- Left Side: Scrolling Image Area ---
+    .imageAreaWrapper {
+      flex: 0 0 60%; // Assign width (adjust percentage as needed)
+      position: relative; // Needed for stacking context of images inside
+      order: 1; // Image on the left in RTL
+
+      // This wrapper doesn't need explicit height; height comes from content (the sticky image wrappers)
+    }
+
+    // Each individual image within the scrolling area
+    .imageStickyWrapper {
+      height: 90vh; // Each image section takes significant viewport height
+      width: 100%;
+      position: sticky; // STICKY IMAGE!
+      top: 5vh; // Sticks 5vh from the top of the viewport
+      margin-bottom: 10vh; // Creates space *after* an image sticks, pushing the next one down to create scroll room. Adjust as needed.
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; // Hide parts of image if they overflow wrapper
+      border-radius: 10px; // Optional styling
+
+      &:last-child {
+        margin-bottom: 0; // No extra space needed after the last image
+        // Maybe slightly less height if content ends abruptly? Optional.
+        // height: 80vh;
+      }
+
+      .brandingImage {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; // Or 'cover' depending on desired effect
+      }
+    }
+
+    // --- Right Side: Sticky Content Area ---
+    .stickyContentContainer {
+      flex: 1; // Takes remaining space
+      order: 2; // Content on the right in RTL
+      height: 90vh; // Match image sticky height (or adjust)
+      position: sticky; // STICKY CONTENT!
+      top: 5vh; // Sticks at the same offset as images
+      display: flex;
+      direction: rtl;;
+      flex-direction: column;
+      // align-items: flex-start; // Align content items to start (right in RTL)
+      padding: 30px 20px; // Padding inside the sticky container
+      // background-color: rgba(20, 20, 30, 0.8); // Optional: subtle background to distinguish
+      // backdrop-filter: blur(5px); // Optional: glass effect
+      border-radius: 10px; // Optional styling
+
+      // --- Sub-elements styling (Title, Desc, Divider, Button) ---
+      // Can reuse styles from .project .contentContainer or define separately
+      .projectTitle {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-family: var(--font-montserrat), sans-serif;
+      }
+      .description {
+        font-size:1.2vw;
+        font-weight: 300;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
       .serviceTitle {
         font-weight: bold;
         margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 1.3em;
+        text-transform: uppercase;
       }
-
-      .service {
-        margin-top: 5px;
-      }
-
-      .description {
-        font-size: 1em;
-        font-weight: 300;
-        margin-bottom: 20px;
-        padding: 0 0 0 40px;
-      }
-
       .divider {
         height: 4px;
-        background: linear-gradient(45deg, #7d13ff, #2c52d1, #15bffd);
+        background: linear-gradient(90deg, #7d13ff, #2c52d1, #15bffd);
         width: 50%;
+        margin-bottom: 15px;
+        margin-top: 5px;
       }
-
+      .service {
+        margin-bottom: 20px;
+      }
       .buttonContainer {
-        margin-top: 20px;
-
-        .liveSite {
-          text-decoration: none;
+        margin-top: auto;
+        padding-top: 20px;
+      } // Push button to bottom
+      .liveSite {
+        text-decoration: none;
+        color: white;
+        padding: 12px 25px;
+        border: solid 2px #00b7ff;
+        border-radius: 30px;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+        font-weight: 500;
+        &:hover {
+          background-color: #00b7ff;
           color: white;
-          padding: 10px 20px;
-          border: solid 2px #00b7ff;
-          border-radius: 30px;
-
-          &:hover {
-            background-color: #00b7ff;
-            color: white;
-          }
         }
       }
+      // --- End Sub-elements ---
     }
-  }
-}
+  } // --- End .brandingProjectContainer ---
+} // --- End .projectsContainer ---
 
+// --- MOBILE Styles ---
 @media screen and (max-width: 900px) {
+  .serviceTitle {
+    font-size: 20px !important;
+  }
   .projectsContainer {
     padding: 0 5vw;
 
+    .projectsList {
+      gap: 6vh;
+    }
+
+    // --- Mobile: Landing/Corporate ---
     .project {
-      flex-direction: column;
-      text-align: center;
-
-      &.reverse {
-        flex-direction: column;
-      }
-
-      .description {
-        text-align: start;
-      }
+      // Target only landing/corporate projects
+      flex-direction: column !important; // Force column, override reverse
+      text-align: start;
+      gap: 0; // Reset gap for column layout
 
       .imageContainer,
       .contentContainer {
         flex: unset;
         width: 100%;
         padding: 0;
+        max-width: 100%;
+        order: unset !important; // Reset order
+      }
 
-        .projectImage {
-          width: 100%;
-          height: auto;
-        }
+      .imageContainer {
+        margin-bottom: 30px; // Space below image
+      }
 
+      .contentContainer {
+        padding: 0 10px; // Padding for content block
+        // Adjust sub-element styles for mobile if needed (e.g., font sizes)
         .projectTitle {
-          font-size: 40px;
-          padding-right: 15px;
+          font-size: 26px;
         }
-
-        .description,
-        .divider,
-        .service,
-        .serviceTitle,
-        .buttonContainer {
-          padding-right: 15px;
-        }
-
-        .divider {
-          margin-right: 15px;
+        .description {
+          font-size: 0.95em;
         }
       }
     }
-  }
-}
+
+    // --- Mobile: Branding (Uses Carousel via BrandingProject component) ---
+    // Hide desktop branding layout, mobile carousel styles are in brandingProject.module.scss
+    .brandingProjectContainer {
+      display: none;
+    }
+
+    // Mobile Carousel styles will be handled by brandingProject.module.scss + BrandingProject component
+    // Ensure .brandingProjectContainerMobile styles exist there
+  } // End mobile media query scope
+} // --- END MOBILE Styles ---

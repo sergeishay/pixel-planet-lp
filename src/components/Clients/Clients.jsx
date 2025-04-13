@@ -27,6 +27,14 @@ const clients = [
     image: "/images/rahav4.png",
     title: "rahav",
   },
+  {
+    image: "/images/local-port.svg",
+    title: "rahav",
+  },
+  {
+    image: "/images/vop.svg",
+    title: "rahav",
+  },
 ];
 
 const Clients = () => {

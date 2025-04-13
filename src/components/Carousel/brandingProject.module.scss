@@ -1,0 +1,115 @@
+// components/BrandingProject/brandingProject.module.scss
+// --- PASTE the MOBILE Styles from the previous attempts here ---
+// Make sure classes like .brandingProjectContainerMobile, .contentContainerMobile,
+// .carouselContainer, .imageWrapper, .carouselButton, .dotsContainer etc. are defined.
+
+// Example structure (ensure you have the full styles):
+.brandingProjectContainerMobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 60px;
+  color: white;
+  direction: rtl;
+  align-items: center;
+  .projectTitle {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-family: var(--font-montserrat), sans-serif;
+  }
+  .contentContainerMobile {
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    // ... h3, p, button styles ...
+    .projectTitle { /* Styles... */ }
+    .description { /* Styles... */ }
+    // ... etc ...
+  }
+  .buttonContainer {
+    margin-top: 25px;
+  }
+  .liveSite {
+    text-decoration: none;
+    color: white;
+    padding: 12px 35px;
+    border: solid 2px #00b7ff;
+    border-radius: 30px;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+    font-weight: 500;
+    &:hover {
+      background-color: #00b7ff;
+      color: white;
+    }
+  }
+  .carouselContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 8px;
+
+    .imageWrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+      &:active { cursor: grabbing; }
+    }
+  }
+  .divider {
+    height: 2px;
+    background: linear-gradient(90deg, #7d13ff, #2c52d1, #15bffd);
+    width: 50%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .carouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+    &.prev { left: 0px; }
+    &.next { right: 0px; }
+    &:hover { background-color: rgba(0, 0, 0, 0.7); }
+  }
+
+   .dotsContainer {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .activeDot { background-color: white; }
+  }
+}
