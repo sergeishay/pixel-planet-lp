@@ -9,7 +9,7 @@
   max-width: 100%;
 
   padding: 0 5vw;
-  // overflow: hidden; // CRITICAL: Ensure this is removed or commented out for sticky positioning to work
+  // overflow-y: hidden; // CRITICAL: Ensure this is removed or commented out for sticky positioning to work
 
   // ... (Keep .title and .tabContainer styles as they were - or use the refined ones from previous attempt if you liked them)
   .title {
@@ -66,6 +66,7 @@
     display: flex;
     flex-direction: column;
     gap: 8vh; // Consistent gap between all project types
+
   }
 
   .project {
@@ -291,6 +292,7 @@
   }
   .projectsContainer {
     padding: 0 5vw;
+  overflow-y: hidden; // CRITICAL: Ensure this is removed or commented out for sticky positioning to work
 
     .projectsList {
       gap: 6vh;
