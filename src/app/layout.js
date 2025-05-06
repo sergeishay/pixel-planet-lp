@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google';
 import { Rubik } from 'next/font/google';
 import Header from '../components/Header';
 import Head from 'next/head';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from 'next/script';
 import { GoogleTagManager,GoogleAnalytics  } from '@next/third-parties/google'
 const rubik = Rubik({ subsets: ['latin'] });
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
       <body className={`${rubik.className} ${montserrat.variable}`}>
         <Header />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
