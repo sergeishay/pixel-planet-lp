@@ -1,9 +1,6 @@
-// components/BrandingProject/brandingProject.module.scss
-// --- PASTE the MOBILE Styles from the previous attempts here ---
-// Make sure classes like .brandingProjectContainerMobile, .contentContainerMobile,
-// .carouselContainer, .imageWrapper, .carouselButton, .dotsContainer etc. are defined.
-
-// Example structure (ensure you have the full styles):
+// ==========================================
+//               MOBILE STYLES
+// ==========================================
 .brandingProjectContainerMobile {
   display: flex;
   flex-direction: column;
@@ -13,39 +10,52 @@
   direction: rtl;
   align-items: center;
   overflow: hidden;
+
   .projectTitle {
     font-size: 2.5em;
     margin-bottom: 15px;
     font-weight: 400;
     font-family: var(--font-montserrat), sans-serif;
   }
+  
   .contentContainerMobile {
     width: 100%;
     padding: 0 15px;
     margin-bottom: 30px;
-    // ... h3, p, button styles ...
-    .projectTitle { /* Styles... */ }
-    .description { /* Styles... */ }
-    // ... etc ...
+    
+    .description {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    .serviceTitle {
+      font-weight: bold;
+    }
+    .service {
+      margin-bottom: 15px;
+    }
   }
+
   .buttonContainer {
     margin-top: 25px;
   }
+
   .liveSite {
     text-decoration: none;
     color: white;
     padding: 12px 35px;
     border: solid 2px #00b7ff;
     border-radius: 30px;
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: 500;
+    display: inline-block;
+    
     &:hover {
       background-color: #00b7ff;
       color: white;
     }
   }
+
   .carouselContainer {
     position: relative;
     width: 100%;
@@ -63,6 +73,7 @@
       &:active { cursor: grabbing; }
     }
   }
+
   .divider {
     height: 2px;
     background: linear-gradient(90deg, #7d13ff, #2c52d1, #15bffd);
@@ -70,6 +81,7 @@
     margin-bottom: 5px;
     margin-top: 5px;
   }
+
   .carouselButton {
     position: absolute;
     top: 50%;
@@ -93,7 +105,7 @@
     &:hover { background-color: rgba(0, 0, 0, 0.7); }
   }
 
-   .dotsContainer {
+  .dotsContainer {
     position: absolute;
     bottom: 15px;
     left: 50%;
@@ -112,5 +124,118 @@
     }
 
     .activeDot { background-color: white; }
+  }
+}
+
+// ==========================================
+//               DESKTOP STYLES
+// ==========================================
+.desktopBrandingContainer {
+  direction: rtl;
+  color: white;
+  width: 100%;
+  margin-bottom: 120px; // מרווח גדול בין פרויקט לפרויקט
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.desktopTopSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+// צד הטקסט - תופס חצי מהרוחב
+.desktopTextContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .projectTitle {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: var(--font-montserrat), sans-serif;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+  }
+
+  .serviceTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .divider {
+    height: 2px;
+    background: linear-gradient(90deg, #7d13ff, #2c52d1, #15bffd);
+    width: 120px;
+    margin-bottom: 15px;
+  }
+
+  .service {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 35px;
+  }
+
+  .buttonContainer {
+    margin-top: 10px;
+  }
+
+  .liveSite {
+    text-decoration: none;
+    color: white;
+    padding: 12px 35px;
+    border: solid 2px #00b7ff;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    display: inline-block;
+
+    &:hover {
+      background-color: #00b7ff;
+      color: white;
+    }
+  }
+}
+
+// צד התמונה המרכזית - תופס חצי מהרוחב
+.desktopMainImageWrapper {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  min-height: 450px; // מבטיח שהתמונה תקבל גובה יפה בדסקטופ
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); // הצללה רכה
+}
+
+// גריד התמונות התחתון
+.desktopGalleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 תמונות בשורה
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.galleryImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3; // יחס רוחב-גובה אחיד לכל התמונות למטה
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   }
 }

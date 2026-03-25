@@ -1,88 +1,45 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "./Clients.module.scss";
 
 const clients = [
-  {
-    image: "/images/ysbatim3.png",
-    title: "ysbatim",
-  },
-  {
-    image: "/images/suramare.png",
-    title: "suramare",
-  },
-  {
-    image: "/images/amitim.svg",
-    title: "amitim",
-  },
-  {
-    image: "/images/bestie.svg",
-    title: "bestie",
-  },
-  {
-    image: "/images/cotton-logo.png",
-    title: "cotton",
-  },
-  {
-    image: "/images/rahav4.png",
-    title: "rahav",
-  },
-  {
-    image: "/images/local-port.svg",
-    title: "rahav",
-  },
-  {
-    image: "/images/vop.svg",
-    title: "rahav",
-  },
+  { image: "/images/clients-logos/logo-amitim.png", title: "amitim" },
+  { image: "/images/clients-logos/logo-bestie.png", title: "bestie" },
+  { image: "/images/clients-logos/logo-cotton.png", title: "cotton" },
+  { image: "/images/clients-logos/logo-localport.png", title: "localport" },
+  { image: "/images/clients-logos/logo-vop.png", title: "vop" },
+  { image: "/images/clients-logos/logo-ysbatim.png", title: "ysbatim" },
+  { image: "/images/clients-logos/logo-galacticads.png", title: "galacticads" },
+  { image: "/images/clients-logos/logo-ranrahav.png", title: "rahav" },
+  { image: "/images/clients-logos/logo-sketchpad.png", title: "sketchpad" },
+  { image: "/images/clients-logos/logo-portal.png", title: "portal" },
+  { image: "/images/clients-logos/logo-whiteglow.png", title: "whiteglow" },
+  { image: "/images/clients-logos/logo-sura.png", title: "sura" },
+  { image: "/images/clients-logos/logo-costello.png", title: "costello" },
 ];
 
 const Clients = () => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const elements = containerRef.current.querySelectorAll(
-              `.${styles.client}`
-            );
-            elements.forEach((el, index) => {
-              setTimeout(() => {
-                el.classList.add(styles.fadeIn);
-              }, index * 300); // Delay each item by 300ms
-            });
-            observer.unobserve(entry.target); // Stop observing after the initial trigger
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(containerRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <div id="clients" className={styles.clients}>
       <h2 className={styles.title}>הכוכבים שלנו</h2>
-      <div ref={containerRef} className={styles.mainDiv}>
-        {clients.map((client, index) => (
-          <div key={index} className={styles.client}>
-            <Image
-              src={client.image}
-              alt={client.title}
-              width={100}
-              height={50}
-              className={styles.image}
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-        ))}
+      
+      <div className={styles.marqueeContainer}>
+        <div className={styles.marqueeTrack}>
+          {/* אנחנו מכפילים את המערך כדי ליצור לולאה אינסופית חלקה */}
+          {clients.concat(clients).map((client, index) => (
+            <div key={index} className={styles.client}>
+              <Image
+                src={client.image}
+                alt={client.title}
+                width={120} // טיפה יותר גדול כדי שייראה טוב
+                height={60}
+                className={styles.image}
+                style={{ objectFit: "contain" }}
+                quality={90}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
