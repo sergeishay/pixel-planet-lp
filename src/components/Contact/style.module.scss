@@ -18,7 +18,13 @@
     height: 2px; 
     background: linear-gradient(45deg, #7d13ff, #2c52d1, #15bffd);
   }
-
+  .phoneContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+  }
   .body {
     padding-top: 200px;
     width: 100%;

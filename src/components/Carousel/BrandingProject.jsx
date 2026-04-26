@@ -91,26 +91,15 @@ const BrandingProject = ({ project }) => {
                  />
              </motion.div>
           </AnimatePresence>
-           {allImages.length > 1 && (
-             <>
-                 <button onClick={() => paginate(-1)} className={`${styles.carouselButton} ${styles.prev}`}> &#10095; </button>
-                 <button onClick={() => paginate(1)} className={`${styles.carouselButton} ${styles.next}`}> &#10094; </button>
-                 <div className={styles.dotsContainer}>
-                    {allImages.map((_, index) => (
-                        <span
-                            key={index}
-                            className={`${styles.dot} ${index === currentImageIndex ? styles.activeDot : ''}`}
-                            onClick={() => {
-                                const newDirection = index > currentImageIndex ? 1 : -1;
-                                setCurrentImageIndex(index);
-                                setPage([index, newDirection]);
-                            }}
-                         />
-                    ))}
-                 </div>
-             </>
-           )}
         </div>
+
+        {/* חצים מתחת לקרוסלה */}
+        {allImages.length > 1 && (
+          <div className={styles.arrowsContainer}>
+            <button onClick={() => paginate(-1)} className={`${styles.carouselButton} ${styles.prev}`}> &#10094; </button>
+            <button onClick={() => paginate(1)} className={`${styles.carouselButton} ${styles.next}`}> &#10095; </button>
+          </div>
+        )}
       </div>
     );
   } else {

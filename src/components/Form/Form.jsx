@@ -9,7 +9,8 @@ const Form = ({ isFooter }) => {
     name: "",
     phone: "",
     email: "",
-    service: isFooter ? "פיתוח ועיצוב אתר תדמית" : "", 
+    service: "",
+
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
@@ -131,7 +132,7 @@ const Form = ({ isFooter }) => {
               name: "",
               phone: "",
               email: "",
-              service: isFooter ? "web development" : "", // Default value for the select field
+              service: "", // Returns to placeholder
               utm_source: "",
               utm_medium: "",
               utm_campaign: "",
@@ -208,8 +209,9 @@ const Form = ({ isFooter }) => {
               onChange={handleChange}
               className={styles.select}
             >
+              <option value="" disabled hidden>השירות המבוקש</option>
               <option value="פיתוח ועיצוב אתר תדמית"> עיצוב ופיתוח אתרים</option>
-              <option value="פיתוח ועיצוב דף נחיתה">עיצוב ופיתוח דף נחיתה</option>
+              <option value="פיתוח ועיצוב דף נחיתה">עיצוב ופיתוח דף נחיתה</option>
               <option value="מיתוג וסושיאל">מיתוג וסושיאל</option>
             </select>
             {errors.service && (
@@ -222,8 +224,7 @@ const Form = ({ isFooter }) => {
           type="submit"
           className={isFooter ? styles.button2 : styles.button}
         >
-          שגרו אלינו
-        </button>
+דברו איתנו        </button>
       </form>
       <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </>

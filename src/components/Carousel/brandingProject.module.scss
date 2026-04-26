@@ -16,6 +16,9 @@
     margin-bottom: 15px;
     font-weight: 400;
     font-family: var(--font-montserrat), sans-serif;
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+    }
   }
   
   .contentContainerMobile {
@@ -59,7 +62,7 @@
   .carouselContainer {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 8px;
 
@@ -82,48 +85,31 @@
     margin-top: 5px;
   }
 
+  .arrowsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 16px;
+  }
+
   .carouselButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.45);
     color: white;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 10px;
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    transition: background-color 0.2s ease;
 
-    &.prev { left: 0px; }
-    &.next { right: 0px; }
-    &:hover { background-color: rgba(0, 0, 0, 0.7); }
-  }
-
-  .dotsContainer {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 10;
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .activeDot { background-color: white; }
+    &:hover { background-color: rgba(0, 0, 0, 0.75); }
   }
 }
 
@@ -158,6 +144,9 @@
     margin-bottom: 20px;
     font-weight: 400;
     font-family: var(--font-montserrat), sans-serif;
+      @media screen and (max-width: 768px) {
+      font-size: 26px;
+    }
   }
 
   .description {

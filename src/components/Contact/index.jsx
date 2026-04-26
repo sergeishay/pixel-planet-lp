@@ -39,9 +39,16 @@ export default function Contact() {
             <Link href="mailto:info@pixel-planet.co.il">
               <p className={styles.smallTitlte}>info@pixel-planet.co.il</p>
             </Link>
-            <Link href="tel:0549093350">
-              <p className={styles.smallTitlte}>054-9093350</p>
-            </Link>
+            <div className={styles.phoneContainer}>
+              <Link href="tel:0549093350">
+                <p className={styles.smallTitlte}>054-9093350</p>
+              </Link>
+              |
+              <Link href="tel:0523086011">
+                <p className={styles.smallTitlte}>052-3086011</p>
+              </Link>
+            </div>
+
             <p className={styles.smallTitlteHeb}>תל אביב, ישראל</p>
           </div>
           <div className={styles.leftSection}>

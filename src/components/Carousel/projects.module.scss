@@ -147,7 +147,7 @@
       }
       .service {
         margin-bottom: 15px;
-        font-size: 1.3em;
+        font-size: 1em;
       }
       .buttonContainer {
         margin-top: 25px;
@@ -238,6 +238,7 @@
         margin-bottom: 15px;
         font-weight: 500;
         font-family: var(--font-montserrat), sans-serif;
+         text-transform: uppercase;
       }
       .description {
         font-size:1.2vw;
@@ -249,7 +250,7 @@
         font-weight: bold;
         margin-bottom: 5px;
         color: #ffffff;
-        font-size: 1.3em;
+        font-size: 1em;
         text-transform: uppercase;
       }
       .divider {
@@ -326,6 +327,7 @@
         // Adjust sub-element styles for mobile if needed (e.g., font sizes)
         .projectTitle {
           font-size: 26px;
+           text-transform: uppercase;
         }
         .description {
           font-size: 0.95em;
