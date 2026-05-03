@@ -124,6 +124,7 @@
         margin-bottom: 10px;
         font-weight: 500;
         font-family: var(--font-montserrat), sans-serif;
+        text-transform: uppercase !important;
       }
       .description {
         font-size:1.2vw;
@@ -238,7 +239,7 @@
         margin-bottom: 15px;
         font-weight: 500;
         font-family: var(--font-montserrat), sans-serif;
-         text-transform: uppercase;
+         text-transform: uppercase !important;
       }
       .description {
         font-size:1.2vw;
@@ -292,6 +293,8 @@
 @media screen and (max-width: 900px) {
   .serviceTitle {
     font-size: 20px !important;
+        text-transform: uppercase;
+
   }
   .projectsContainer {
     padding: 0 5vw;

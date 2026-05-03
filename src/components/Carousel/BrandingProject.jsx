@@ -48,13 +48,7 @@ const BrandingProject = ({ project }) => {
             <p className={styles.serviceTitle}>שירות</p>
             <div className={styles.divider}></div>
             <p className={styles.service}>{project.service}</p>
-            {project.liveLink && project.liveLink !== "#" && (
-                <div className={styles.buttonContainer}>
-                <Link href={project.liveLink} target="_blank" className={styles.liveSite}>
-                    אתר לייב
-                </Link>
-                </div>
-            )}
+
         </div>
 
         {/* קרוסלת התמונות */}

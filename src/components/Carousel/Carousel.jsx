@@ -59,7 +59,7 @@ const projects = [
     type: "corporate",
   },
     {
-    title: "Voice of the People",
+    title: "VOICE OF THE PEOPLE",
       description:
       " היא מועצה יהודית-עולמית, זירה לאחדות, שינוי וצמיחה, הפועלת בהובלתו של נשיא מדינת ישראל, יצחק הרצוג.",
     service: "מיתוג, עיצוב ופיתוח אתר תדמית",
@@ -77,7 +77,7 @@ const projects = [
     type: "corporate",
   },
  {
-    title: "SketchPad",
+    title: "SKETCHPAD",
       description:
  "עיצוב ופיתוח אתר לעמותת SketchPad – קהילה של חללי עבודה משותפים לארגונים ויזמים יהודיים, המעודדת שיתופי פעולה והשפעה קהילתית.",
     service: "עיצוב לוגו | עיצוב ופיתוח אתר תדמית",
@@ -109,7 +109,6 @@ const projects = [
     title: "GALACTICADS",
     description: "יצרנו מיתוג חדש, UX/UI מודרני ופיתוח אתר תדמיתי מרהיב מעולמות הגלקסיה שמציע פונקציונליות מושלמת, חוויית משתמש נגישה וזמינה, ומדגיש את הערכים והחזון של המותג.",
     service: "מיתוג ושפה גרפית",
-    liveLink: "https://www.galactic-ads.com/",
     image: "/images/brand-images/galactic-brand1.webp",
     type: "branding",
     imageGallery: [
@@ -122,7 +121,6 @@ const projects = [
     title: "PLAY GROUND",
     description: "עיצוב פופאפים ובאנרים למשחקים בינלאומיים מעוצבים בצורה צבעונית וייחודית. העיצוב מניע לפעולה ומושך את השחקנים לבצע רכישות בתוך המשחק באמצעות עיצוב כפתורים וטיפוגרפיה בולטת.",
     service: "עיצוב פוסטים לסושיאל מדיה + עיצוב פופאפים ובאנרים",
-    liveLink: "",
     image: "/images/brand-images/playground1.webp",
     type: "branding",
     imageGallery: [
@@ -135,7 +133,6 @@ const projects = [
     title: "SURAMARE",
     description: "עיצוב ופיתוח עמוד נחיתה לסורא מארה – אולם אירועים ייחודי המוקדש ליצירת חוויות בוטיק מותאמות אישית. מתמחים בהפקת אירועים עסקיים, כנסים, אירועי חברה ותרבות, עם דגש על עיצוב אלגנטי, שירות יוצא דופן וחוויית אורחים בלתי נשכחת.",
     service: "עיצוב פוסטים לסושיאל מדיה + עמוד נחיתה",
-    liveLink: "https://suramare.co.il/",
     image: "/images/brand-images/sura1.webp",
     type: "branding",
     imageGallery: [
@@ -148,7 +145,6 @@ const projects = [
     title: "UNICORN",
     description: "פלטפורמה שמחברת בין אמנים לאספנים בעולם הדיגיטלי. יוניקורן היא הבית החדש שלכם לאומנות דיגיטלית. עם ממשק ידידותי וטכנולוגיה מתקדמת, אנו מאפשרים לאמנים להפוך את היצירות שלהם לנכסי NFT ייחודיים, ולחשוף אותן לקהל עולמי.",
     service: "עיצוב לוגו ושפה גרפית רחבה + עיצוב אתר",
-    liveLink: "",
     image: "/images/brand-images/unicorn1.webp",
     type: "branding",
     imageGallery: [
@@ -158,10 +154,9 @@ const projects = [
     ],
   },
   {
-    title: "Voice of the People",
+    title: "VOICE OF THE PEOPLE",
     description: "היא מועצה יהודית-עולמית, זירה לאחדות, שינוי וצמיחה, הפועלת בהובלתו של נשיא מדינת ישראל, יצחק הרצוג.",
     service: "מיתוג, עיצוב ופיתוח אתר תדמית",
-    liveLink: "https://www.voiceofthepeople.network/",
     image: "/images/brand-images/vop1.webp",
     type: "branding",
     imageGallery: [
@@ -174,7 +169,6 @@ const projects = [
     title: "WHITEGLOVE",
     description: "יצרנו מיתוג חדש, UX/UI מקצועי ופיתוח אתר דינמי ומתקדם שמדגיש את החדשנות שלהם בשיווק מונחה AI ומעניק חוויה אינטואיטיבית, נגישה ומרשימה למשתמשים.",
     service: "מיתוג ושפה גרפית",
-    liveLink: "https://www.voiceofthepeople.network/",
     image: "/images/brand-images/whiteglow1.webp",
     type: "branding",
     imageGallery: [
