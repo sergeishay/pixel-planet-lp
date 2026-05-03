@@ -176,6 +176,18 @@ const projects = [
       "/images/brand-images/whiteglow3.webp",
       "/images/brand-images/whiteglow4.webp",
     ],
+  },
+    {
+    title: "SKETCHPAD",
+    description: "ביצענו ריברנדינג ל-SketchPad עם לוגו חדש, צבעוניות נועזת ועיצוב אתר תדמיתי מודרני, הכנו ספר מותג עם הנחיות עיצוב מדויקות ויצרנו מרצ’נדייז שמדגישים חדשנות, מודרניות ומקצועיות.",
+    service:"עיצוב לוגו וברנד בוק + אתר תדמית",
+    image: "/images/brand-images/sketchpad1.webp",
+    type: "branding",
+    imageGallery: [
+      "/images/brand-images/sketchpad2.webp",
+      "/images/brand-images/sketchpad3.webp",
+      "/images/brand-images/sketchpad4.webp",
+    ],
   }
 ];
 
